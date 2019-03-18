@@ -1,0 +1,20 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="main.master.cs" Inherits="Library_Management.main" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="cphCss" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ContentPlaceHolder ID="cphMain" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <asp:ContentPlaceHolder ID="cphScript" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
