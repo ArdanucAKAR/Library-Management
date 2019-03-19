@@ -3236,6 +3236,16 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Barcode.cs" />
+    <Compile Include="Classes\Book.cs" />
+    <Compile Include="Classes\ISBN.cs" />
+    <Compile Include="Classes\Library.cs" />
+    <Compile Include="Classes\Literature.cs" />
+    <Compile Include="Classes\Loaned.cs" />
+    <Compile Include="Classes\Magazine.cs" />
+    <Compile Include="Classes\Mail.cs" />
+    <Compile Include="Classes\Member.cs" />
+    <Compile Include="Classes\Reservation.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -3246,6 +3256,7 @@
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\Ioperations.cs" />
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -3771,7 +3782,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Classes\" />
     <Folder Include="css\" />
     <Folder Include="img\" />
     <Folder Include="js\" />
