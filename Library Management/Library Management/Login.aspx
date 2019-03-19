@@ -4,104 +4,131 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" lang="tr">
 <head runat="server">
-    <!-- Meta Start -->
-    <meta charset="UTF-8" />
-    <meta name="keywords" content="Kütüphane Yönetim Yazılımı" />
-    <meta name="description" content="Kütüphane Yönetim Yazılımı" />
-    <meta name="author" content="Ardanuc AKAR - Volkan KAHRAMAN" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <!-- Meta End -->
-
-    <!-- Title Start -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
     <title></title>
-    <!-- Title End -->
-
-    <!-- Web Fonts Start -->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css" />
-    <!-- Web Fonts End -->
-
-    <!-- Vendor CSS Start -->
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css" />
-    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css" />
-    <!-- Vendor CSS End -->
-
-    <!-- Theme CSS Start -->
-    <link rel="stylesheet" href="assets/stylesheets/theme.css" />
-    <!-- Theme CSS End -->
-
-    <!-- Skin CSS Start -->
-    <link rel="stylesheet" href="assets/stylesheets/skins/default.css" />
-    <!-- Skin CSS End -->
-
-    <!-- Head Libs Start -->
-    <script src="assets/vendor/modernizr/modernizr.js"></script>
-    <!-- Head Libs End -->
+    <link rel="apple-touch-icon" href="../../../app-assets/images/ico/apple-icon-120.png"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Quicksand:300,400,500,700" rel="stylesheet">
+    <link href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css" rel="stylesheet"/>
+    <!-- BEGIN VENDOR CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/vendors.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/icheck/icheck.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/icheck/custom.css"/>
+    <!-- END VENDOR CSS-->
+    <!-- BEGIN MODERN CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/app.css"/>
+    <!-- END MODERN CSS-->
+    <!-- BEGIN Page Level CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-content-menu.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/colors/palette-gradient.css"/>
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/login-register.css"/>
+    <!-- END Page Level CSS-->
+    <!-- BEGIN Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css"/>
+    <!-- END Custom CSS-->
 </head>
-<body>
+<body class="vertical-layout vertical-content-menu 1-column  bg-full-screen-image menu-expanded blank-page blank-page" data-open="click" data-menu="vertical-content-menu" data-col="1-column">
     <form id="form1" runat="server">
-        <!-- start: page -->
-        <section class="body-sign">
-            <div class="center-sign">
-                <a href="/" class="logo pull-left">
-                    <img src="assets/images/logo.png" height="54" alt="Porto Admin" />
-                </a>
-
-                <div class="panel panel-sign">
-                    <div class="panel-title-sign mt-xl text-right">
-                        <h2 class="title text-uppercase text-bold m-none"><i class="fa fa-user mr-xs"></i>Kütüphane Giriş Paneli</h2>
-                    </div>
-                    <div class="panel-body">
-                        <div class="form-group mb-lg">
-                            <label>Kullanıcı Adı</label>
-                            <div class="input-group input-group-icon">
-                                <input name="username" type="text" class="form-control input-lg" />
-                                <span class="input-group-addon">
-                                    <span class="icon icon-lg">
-                                        <i class="fa fa-user"></i>
-                                    </span>
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="form-group mb-lg">
-                            <div class="clearfix">
-                                <label class="pull-left">Şifre</label>
-                            </div>
-                            <div class="input-group input-group-icon">
-                                <input name="pwd" type="password" class="form-control input-lg" />
-                                <span class="input-group-addon">
-                                    <span class="icon icon-lg">
-                                        <i class="fa fa-lock"></i>
-                                    </span>
-                                </span>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-xs-8">
-                                <div class="checkbox-custom checkbox-default">
-                                    <input id="RememberMe" name="rememberme" type="checkbox" />
-                                    <label for="RememberMe">Beni Hatırla</label>
+        <!-- ////////////////////////////////////////////////////////////////////////////-->
+        <div class="app-content content">
+            <div class="content-wrapper">
+                <div class="content-header row">
+                </div>
+                <div class="content-body">
+                    <section class="flexbox-container">
+                        <div class="col-12 d-flex align-items-center justify-content-center">
+                            <div class="col-md-4 col-10 box-shadow-2 p-0">
+                                <div class="card border-grey border-lighten-3 px-1 py-1 m-0">
+                                    <div class="card-header border-0">
+                                        <div class="card-title text-center">
+                                            <img src="../../../app-assets/images/logo/logo-dark.png" alt="branding logo">
+                                        </div>
+                                        <h6 class="card-subtitle line-on-side text-muted text-center font-small-3 pt-2">
+                                            <span>Easily Using</span>
+                                        </h6>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="text-center">
+                                            <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-facebook">
+                                                <span class="la la-facebook"></span>
+                                            </a>
+                                            <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-twitter">
+                                                <span class="la la-twitter"></span>
+                                            </a>
+                                            <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-linkedin">
+                                                <span class="la la-linkedin font-medium-4"></span>
+                                            </a>
+                                            <a href="#" class="btn btn-social-icon mr-1 mb-1 btn-outline-github">
+                                                <span class="la la-github font-medium-4"></span>
+                                            </a>
+                                        </div>
+                                        <p class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2 my-1">
+                                            <span>OR Using Account Details</span>
+                                        </p>
+                                        <div class="card-body">
+                                            <form class="form-horizontal" action="index.html" novalidate>
+                                                <fieldset class="form-group position-relative has-icon-left">
+                                                    <input type="text" class="form-control" id="user-name" placeholder="Your Username"
+                                                        required>
+                                                    <div class="form-control-position">
+                                                        <i class="ft-user"></i>
+                                                    </div>
+                                                </fieldset>
+                                                <fieldset class="form-group position-relative has-icon-left">
+                                                    <input type="password" class="form-control" id="user-password" placeholder="Enter Password"
+                                                        required>
+                                                    <div class="form-control-position">
+                                                        <i class="la la-key"></i>
+                                                    </div>
+                                                </fieldset>
+                                                <div class="form-group row">
+                                                    <div class="col-md-6 col-12 text-center text-sm-left">
+                                                        <fieldset>
+                                                            <input type="checkbox" id="remember-me" class="chk-remember">
+                                                            <label for="remember-me">Remember Me</label>
+                                                        </fieldset>
+                                                    </div>
+                                                    <div class="col-md-6 col-12 float-sm-left text-center text-sm-right"><a href="recover-password.html" class="card-link">Forgot Password?</a></div>
+                                                </div>
+                                                <button type="submit" class="btn btn-outline-info btn-block"><i class="ft-unlock"></i>Login</button>
+                                            </form>
+                                        </div>
+                                        <p class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2 my-1">
+                                            <span>New to Modern ?</span>
+                                        </p>
+                                        <div class="card-body">
+                                            <a href="register-with-bg-image.html" class="btn btn-outline-danger btn-block"><i class="ft-user"></i>Register</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-xs-4 text-right">
-                                <button type="submit" class="btn btn-primary">Giriş</button>
-                            </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
-
-                <p class="text-center text-muted mt-md mb-md">&copy; Copyright 2014. All Rights Reserved.</p>
             </div>
-        </section>
-        <!-- end: page -->
-		<script src="assets/vendor/jquery/jquery.js"></script>		<script src="assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>		<script src="assets/vendor/bootstrap/js/bootstrap.js"></script>		<script src="assets/vendor/nanoscroller/nanoscroller.js"></script>		<script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>		<script src="assets/vendor/magnific-popup/magnific-popup.js"></script>		<script src="assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
-
-        <!-- Theme Base, Components and Settings -->
-        <script src="assets/javascripts/theme.js"></script>
-
-        <!-- Theme Initialization Files -->
-        <script src="assets/javascripts/theme.init.js"></script>
+        </div>
+        <!-- ////////////////////////////////////////////////////////////////////////////-->
+        <!-- BEGIN VENDOR JS-->
+        <script src="../../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+        <!-- BEGIN VENDOR JS-->
+        <!-- BEGIN PAGE VENDOR JS-->
+        <script src="../../../app-assets/vendors/js/ui/headroom.min.js" type="text/javascript"></script>
+        <script src="../../../app-assets/vendors/js/forms/validation/jqBootstrapValidation.js"
+            type="text/javascript"></script>
+        <script src="../../../app-assets/vendors/js/forms/icheck/icheck.min.js" type="text/javascript"></script>
+        <!-- END PAGE VENDOR JS-->
+        <!-- BEGIN MODERN JS-->
+        <script src="../../../app-assets/js/core/app-menu.js" type="text/javascript"></script>
+        <script src="../../../app-assets/js/core/app.js" type="text/javascript"></script>
+        <!-- END MODERN JS-->
+        <!-- BEGIN PAGE LEVEL JS-->
+        <script src="../../../app-assets/js/scripts/forms/form-login-register.js" type="text/javascript"></script>
+        <!-- END PAGE LEVEL JS-->
     </form>
 </body>
 </html>

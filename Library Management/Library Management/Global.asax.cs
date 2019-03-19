@@ -18,7 +18,7 @@ namespace Library_Management
 
         public void RegisterRoutes(RouteCollection routes)
         {
-            routes.MapPageRoute("", "", "~/.aspx");
+            routes.MapPageRoute("", "", "~/Login.aspx");
         }
 
         protected void Session_Start(object sender, EventArgs e)

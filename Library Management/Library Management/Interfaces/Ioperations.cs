@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library_Management
 {
-    interface Ioperations
+    interface IOperations
     {
         void Add();
 

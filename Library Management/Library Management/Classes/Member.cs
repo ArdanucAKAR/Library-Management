@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Library_Management
 {
-    public class Member : Ioperations
+    public class Member : IOperations
     {
         public void Add()
         {
