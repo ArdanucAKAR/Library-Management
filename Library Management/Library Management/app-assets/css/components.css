@@ -67,7 +67,7 @@ html {
         }
 
         html body.bg-full-screen-image {
-            background: url(../../app-assets/images/backgrounds/login-background.jpg) no-repeat center center fixed;
+            background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),url(../../app-assets/images/backgrounds/login-background.jpg) no-repeat center center fixed;
             background-size: cover;
         }
 
