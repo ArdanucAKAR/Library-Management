@@ -5067,7 +5067,7 @@
     <Compile Include="Classes\Mail.cs" />
     <Compile Include="Classes\Member.cs" />
     <Compile Include="Classes\Reservation.cs" />
-    <Compile Include="Classes\SQL.cs" />
+    <Compile Include="Classes\Database.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
