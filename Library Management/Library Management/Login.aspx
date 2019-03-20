@@ -77,14 +77,6 @@
                                                     <i class="la la-key"></i>
                                                 </div>
                                             </fieldset>
-                                            <div class="form-group row">
-                                                <div class="col-md-6 col-12 text-center text-sm-left">
-                                                    <fieldset>
-                                                        <asp:CheckBox ID="chkRememberMe" runat="server" CssClass="chk-remember" />
-                                                        <label for="remember-me">Beni Hatırla</label>
-                                                    </fieldset>
-                                                </div>
-                                            </div>
                                             <button class="btn btn-outline-success btn-block" runat="server" onclick="CheckLogin()" validationgroup="Login" type="button" id="btnLogin">
                                                 <i class="ft-unlock"></i>
                                                 Giriş

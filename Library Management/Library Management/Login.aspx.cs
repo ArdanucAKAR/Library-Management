@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Library_Management.Classes;
 
 namespace Library_Management
 {
@@ -15,13 +16,14 @@ namespace Library_Management
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Attendant.isLoggedIn())
+                Response.Redirect("Home");
         }
-        [WebMethod(EnableSession = true)]
+        [WebMethod]
         public static bool CheckLogin(string username, string password)
         {
-            HttpContext.Current.Session["ad"] = "";
-            return true;
+            Attendant attendant = new Attendant() { Username = username, Password = password };
+            return attendant.Login();
         }
     }
 }
