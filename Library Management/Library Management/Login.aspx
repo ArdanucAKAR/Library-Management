@@ -18,8 +18,8 @@
     <!-- Title End -->
 
     <!-- Favicon Start -->
-    <link rel="apple-touch-icon" href="../../../app-assets/images/ico/apple-icon-120.png" />
-    <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico" />
+    <link rel="apple-touch-icon" href="<%# Page.ResolveUrl("~") %>/app-assets/images/ico/apple-icon-120.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="<%# Page.ResolveUrl("~") %>/app-assets/images/ico/favicon.ico" />
     <!-- Favicon End -->
 
     <!-- Web Font Start -->
@@ -28,26 +28,26 @@
     <!-- Web Font Start -->
 
     <!-- Begin Vendor CSS Start -->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/vendors.css" />
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/icheck/icheck.css" />
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/forms/icheck/custom.css" />
+    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/css/vendors.css" />
+    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/vendors/css/forms/icheck/icheck.css" />
+    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/vendors/css/forms/icheck/custom.css" />
     <!-- Begin Vendor CSS End -->
 
     <!-- Begin Modern CSS Start -->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/app.css" />
+    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/css/app.css" />
     <!-- Begin Modern CSS End -->
 
     <!-- Begin Page Level CSS Start -->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-content-menu.css" />
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/colors/palette-gradient.css" />
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/login-register.css" />
+    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/css/core/menu/menu-types/vertical-content-menu.css" />
+    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/css/core/colors/palette-gradient.css" />
+    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/css/pages/login-register.css" />
     <!-- Begin Page Level CSS End-->
 
     <!-- Begin Custom CSS Start -->
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/assets/css/style.css" />
     <!-- Begin Custom CSS End -->
 </head>
-<body class="vertical-layout vertical-content-menu 1-column  bg-full-screen-image menu-expanded blank-page blank-page" data-open="click" data-menu="vertical-content-menu" data-col="1-column">
+<body class="vertical-layout vertical-content-menu 1-column bg-full-screen-image menu-expanded blank-page blank-page" data-open="click" data-menu="vertical-content-menu" data-col="1-column">
     <form id="form1" runat="server">
         <div class="app-content content">
             <div class="content-wrapper">
@@ -58,21 +58,21 @@
                                 <div class="card border-grey border-lighten-3 px-1 py-1 m-0">
                                     <div class="card-header border-0">
                                         <div class="card-title text-center">
-                                            <img src="../../../app-assets/images/logo/logo-dark.png" alt="branding logo" />
+                                            <img src="../../../app-assets/images/logo/e-KOS-Logo.png" alt="branding logo" class="img-fluid" />
                                         </div>
                                     </div>
                                     <div class="card-content">
                                         <div class="card-body">
                                             <fieldset class="form-group position-relative has-icon-left">
                                                 <asp:TextBox ID="txtUsername" runat="server" CssClass="form-control" placeholder="Kullanıcı Adı" ValidationGroup="Login"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="rfvUsername" runat="server" ErrorMessage="" ValidationGroup="Login" ControlToValidate="txtUsername" EnableClientScript="false"></asp:RequiredFieldValidator>
+                                                <asp:CustomValidator ID="cvUsername" runat="server" ErrorMessage="" ControlToValidate="txtUsername" ClientValidationFunction="IsEmpty" ValidateEmptyText="true" ValidationGroup="Login"></asp:CustomValidator>
                                                 <div class="form-control-position">
                                                     <i class="ft-user"></i>
                                                 </div>
                                             </fieldset>
                                             <fieldset class="form-group position-relative has-icon-left">
-                                                <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Şifre" ValidationGroup="Login"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="rfvPassword" runat="server" ErrorMessage="" ValidationGroup="Login" ControlToValidate="txtPassword" EnableClientScript="false"></asp:RequiredFieldValidator>
+                                                <asp:TextBox ID="txtPassword" runat="server" CssClass="form-control" placeholder="Şifre" TextMode="Password" ValidationGroup="Login"></asp:TextBox>
+                                                <asp:CustomValidator ID="cvPassword" runat="server" ErrorMessage="" ControlToValidate="txtPassword" ClientValidationFunction="IsEmpty" ValidateEmptyText="true" ValidationGroup="Login"></asp:CustomValidator>
                                                 <div class="form-control-position">
                                                     <i class="la la-key"></i>
                                                 </div>
@@ -85,7 +85,10 @@
                                                     </fieldset>
                                                 </div>
                                             </div>
-                                            <button type="button" class="btn btn-outline-info btn-block" runat="server" onserverclick="btnLogin_Click" validationgroup="Login"><i class="ft-unlock"></i>Giriş</button>
+                                            <button class="btn btn-outline-success btn-block" runat="server" onclick="CheckLogin()" validationgroup="Login" type="button" id="btnLogin">
+                                                <i class="ft-unlock"></i>
+                                                Giriş
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -96,23 +99,29 @@
             </div>
         </div>
         <!-- Begin Vendor JS Start-->
-        <script src="../../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+        <script src="<%# Page.ResolveUrl("~") %>/app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
         <!-- Begin Vendor JS Start-->
 
         <!-- Begin Page Vendor JS Start -->
-        <script src="../../../app-assets/vendors/js/ui/headroom.min.js" type="text/javascript"></script>
-        <script src="../../../app-assets/vendors/js/forms/validation/jqBootstrapValidation.js" type="text/javascript"></script>
-        <script src="../../../app-assets/vendors/js/forms/icheck/icheck.min.js" type="text/javascript"></script>
+        <script src="<%# Page.ResolveUrl("~") %>/app-assets/vendors/js/ui/headroom.min.js" type="text/javascript"></script>
+        <script src="<%# Page.ResolveUrl("~") %>/app-assets/vendors/js/forms/validation/jqBootstrapValidation.js" type="text/javascript"></script>
+        <script src="<%# Page.ResolveUrl("~") %>/app-assets/vendors/js/forms/icheck/icheck.min.js" type="text/javascript"></script>
         <!-- Begin Page Vendor JS End -->
 
         <!-- Begin Modern JS Start -->
-        <script src="../../../app-assets/js/core/app-menu.js" type="text/javascript"></script>
-        <script src="../../../app-assets/js/core/app.js" type="text/javascript"></script>
+        <script src="<%# Page.ResolveUrl("~") %>/app-assets/js/core/app-menu.js" type="text/javascript"></script>
+        <script src="<%# Page.ResolveUrl("~") %>/app-assets/js/core/app.js" type="text/javascript"></script>
         <!-- Begin Modern JS End -->
 
         <!-- Begin Page Level JS Start -->
-        <script src="../../../app-assets/js/scripts/forms/form-login-register.js" type="text/javascript"></script>
+        <script src="<%# Page.ResolveUrl("~") %>/app-assets/js/scripts/forms/form-login-register.js" type="text/javascript"></script>
+<%--        <script src="<%# Page.ResolveUrl("~") %>/app-assets/js/scripts/popover/popover.js" type="text/javascript"></script>--%>
         <!-- Begin Page Level JS End -->
+
+        <!-- Custom Script Start -->
+        <script src="<%# Page.ResolveUrl("~") %>/app-assets/js/scripts/Login.js" type="text/javascript"></script>
+        <script src="<%# Page.ResolveUrl("~") %>/app-assets/js/scripts/Validation.js" type="text/javascript"></script>
+        <!-- Custom Script End -->
     </form>
 </body>
 </html>

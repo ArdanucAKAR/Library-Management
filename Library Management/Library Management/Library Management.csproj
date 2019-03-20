@@ -2477,6 +2477,7 @@
     <Content Include="app-assets\js\scripts\forms\wizard-steps.min.js" />
     <Content Include="app-assets\js\scripts\gallery\photo-swipe\photoswipe-script.js" />
     <Content Include="app-assets\js\scripts\gallery\photo-swipe\photoswipe-script.min.js" />
+    <Content Include="app-assets\js\scripts\Login.js" />
     <Content Include="app-assets\js\scripts\modal\components-modal.js" />
     <Content Include="app-assets\js\scripts\modal\components-modal.min.js" />
     <Content Include="app-assets\js\scripts\navs\navs.js" />
@@ -2616,6 +2617,7 @@
     <Content Include="app-assets\js\scripts\ui\jquery-ui\slider-spinner.min.js" />
     <Content Include="app-assets\js\scripts\ui\scrollable.js" />
     <Content Include="app-assets\js\scripts\ui\scrollable.min.js" />
+    <Content Include="app-assets\js\scripts\Validation.js" />
     <Content Include="app-assets\vendors\css\animate\animate.css" />
     <Content Include="app-assets\vendors\css\buttons\ladda-themeless.min.css" />
     <Content Include="app-assets\vendors\css\calendars\fullcalendar.min.css" />
@@ -5047,6 +5049,7 @@
     <Content Include="assets\css\style-rtl.css" />
     <Content Include="assets\css\style.css" />
     <Content Include="assets\js\scripts.js" />
+    <Content Include="app-assets\images\logo\e-KOS-Logo.png" />
     <Content Include="Global.asax" />
     <Content Include="app-assets\images\backgrounds\login-background.jpg" />
     <Content Include="index.aspx" />
