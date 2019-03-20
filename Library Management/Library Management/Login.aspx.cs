@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
@@ -14,10 +17,11 @@ namespace Library_Management
         {
 
         }
-        [WebMethod]
+        [WebMethod(EnableSession = true)]
         public static bool CheckLogin(string username, string password)
         {
-            return false;
+            HttpContext.Current.Session["ad"] = "";
+            return true;
         }
     }
 }

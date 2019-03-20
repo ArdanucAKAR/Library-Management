@@ -115,7 +115,6 @@
 
         <!-- Begin Page Level JS Start -->
         <script src="<%# Page.ResolveUrl("~") %>/app-assets/js/scripts/forms/form-login-register.js" type="text/javascript"></script>
-<%--        <script src="<%# Page.ResolveUrl("~") %>/app-assets/js/scripts/popover/popover.js" type="text/javascript"></script>--%>
         <!-- Begin Page Level JS End -->
 
         <!-- Custom Script Start -->

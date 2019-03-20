@@ -5067,6 +5067,7 @@
     <Compile Include="Classes\Mail.cs" />
     <Compile Include="Classes\Member.cs" />
     <Compile Include="Classes\Reservation.cs" />
+    <Compile Include="Classes\SQL.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -5621,6 +5622,7 @@
     <Content Include="assets\scss\variables\components-variables.scss" />
     <Content Include="assets\scss\variables\variables.scss" />
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
