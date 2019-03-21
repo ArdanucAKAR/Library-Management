@@ -340,6 +340,7 @@
     <Content Include="app-assets\css\core\mixins\main-menu-mixin.min.css" />
     <Content Include="app-assets\css\core\mixins\transitions.css" />
     <Content Include="app-assets\css\core\mixins\transitions.min.css" />
+    <Content Include="app-assets\css\Main.css" />
     <Content Include="app-assets\css\pages\card-charts.css" />
     <Content Include="app-assets\css\pages\card-charts.min.css" />
     <Content Include="app-assets\css\pages\chat-application.css" />
@@ -1785,6 +1786,7 @@
     <Content Include="app-assets\js\core\libraries\jquery_ui\jquery-ui.min.js" />
     <Content Include="app-assets\js\core\libraries\jquery_ui\touch.min.js" />
     <Content Include="app-assets\js\core\libraries\jquery_ui\widgets.min.js" />
+    <Content Include="app-assets\js\scripts\Main.js" />
     <Content Include="app-assets\js\scripts\animation\animation.js" />
     <Content Include="app-assets\js\scripts\animation\animation.min.js" />
     <Content Include="app-assets\js\scripts\cards\card-charts.js" />

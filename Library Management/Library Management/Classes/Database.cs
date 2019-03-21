@@ -13,9 +13,11 @@ namespace Library_Management.Classes
     {
         public string sqlConn = ConfigurationManager.ConnectionStrings["sqlConn"].ConnectionString;
         public string ProcedureName { get; set; }
-        public DataSet Queries(SqlParameter[] parameter)
+        public DataSet Queries(SqlParameter[] parameters)
         {
-            DataSet ds = SqlHelper.ExecuteDataset(sqlConn.ToString(), CommandType.StoredProcedure, ProcedureName, parameter);
+            foreach (SqlParameter parameter in parameters)
+                parameter.Direction = ParameterDirection.Input;
+            DataSet ds = SqlHelper.ExecuteDataset(sqlConn.ToString(), CommandType.StoredProcedure, ProcedureName, parameters);
             return ds;
         }
     }

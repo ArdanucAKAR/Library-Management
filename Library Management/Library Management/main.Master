@@ -18,8 +18,8 @@
     <!-- Title End -->
 
     <!-- Favicon Start -->
-    <link rel="apple-touch-icon" href="../../../app-assets/images/ico/apple-icon-120.png" />
-    <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico" />
+    <link rel="apple-touch-icon" href="<%# Page.ResolveUrl("~") %>/app-assets/images/ico/apple-icon-120.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="<%# Page.ResolveUrl("~") %>/app-assets/images/ico/favicon.ico" />
     <!-- Favicon End -->
 
     <!-- Web Font Start -->
@@ -28,32 +28,36 @@
     <!-- Web Font Start -->
 
     <!-- Begin Vendor CSS Start -->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/vendors.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/weather-icons/climacons.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/fonts/meteocons/style.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/charts/morris.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/charts/chartist.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/charts/chartist-plugin-tooltip.css">
+    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/css/vendors.css">
+    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/vendors/css/weather-icons/climacons.min.css">
+    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/fonts/meteocons/style.css">
+    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/vendors/css/charts/morris.css">
+    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/vendors/css/charts/chartist.css">
+    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/vendors/css/charts/chartist-plugin-tooltip.css">
     <!-- Begin Vendor CSS End -->
 
     <!-- Begin Modern CSS Start -->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/app.css" />
+    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/css/app.css" />
     <!-- Begin Modern CSS End -->
 
     <!-- Begin Page Level CSS Start -->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-content-menu.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/colors/palette-gradient.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/fonts/simple-line-icons/style.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/colors/palette-gradient.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/timeline.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/dashboard-ecommerce.css">
+    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/css/core/menu/menu-types/vertical-content-menu.css">
+    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/fonts/simple-line-icons/style.css">
+    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/css/pages/timeline.css">
+    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/css/pages/dashboard-ecommerce.css">
     <!-- Begin Page Level CSS End-->
 
     <!-- Begin Custom CSS Start -->
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/assets/css/style.css" />
     <!-- Begin Custom CSS End -->
+
+    <!-- Custom CSS Start -->
+    <link href="<%# Page.ResolveUrl("~") %>/app-assets/css/Main.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="cphCss" runat="server">
     </asp:ContentPlaceHolder>
+    <!-- Custom CSS End -->
 </head>
 <body class="vertical-layout vertical-content-menu 2-columns   menu-expanded fixed-navbar" data-open="click" data-menu="vertical-content-menu" data-col="2-columns">
     <form id="form1" runat="server">
@@ -63,8 +67,8 @@
                     <ul class="nav navbar-nav flex-row">
                         <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu font-large-1"></i></a></li>
                         <li class="nav-item">
-                            <a class="navbar-brand" href="index.html">
-                                <img class="brand-logo" alt="modern admin logo" src="../../../app-assets/images/logo/e-KOS-Logo.png">
+                            <a class="navbar-brand" href="Home">
+                                <img class="brand-logo" alt="Kütüphane Otomasyon Sistemi" src="<%# Page.ResolveUrl("~") %>/app-assets/images/logo/e-KOS-Logo.png">
                                 <h3 class="brand-text">Kütüphane Otomasyon Sistemi</h3>
                             </a>
                         </li>
@@ -77,8 +81,11 @@
                     <div class="collapse navbar-collapse" id="navbar-mobile">
                         <ul class="nav navbar-nav mr-auto float-left">
                             <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ft-menu"></i></a></li>
-                            <li class="nav-item d-none d-md-block"><a class="nav-link nav-link-expand" href="#"><i class="ficon ft-maximize"></i></a></li>
+                            <li class="nav-item d-none d-md-block">
+                                <a class="nav-link nav-fullscreen" id="btnFullscreen"><i class="ficon ft-maximize"></i></a>
+                            </li>
                             <li class="nav-item nav-search"><a class="nav-link nav-link-search" href="#"><i class="ficon ft-search"></i></a>
+                                <%-- Yapılacaklar: Autocomplete Yapılacak --%>
                                 <div class="search-input">
                                     <input class="input" type="text" placeholder="Explore Modern...">
                                 </div>
@@ -87,9 +94,10 @@
                         <ul class="nav navbar-nav float-right">
                             <li class="dropdown dropdown-user nav-item">
                                 <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
-                                    <span class="mr-1">Merhaba,
-                 
-                                        <span class="user-name text-bold-700">Volkan Kahraman</span>
+                                    <span class="mr-1">Merhaba,                 
+                                        <span class="user-name text-bold-700">
+                                            <asp:Literal ID="ltrAttendantFullName" runat="server"></asp:Literal>
+                                        </span>
                                     </span>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
@@ -1256,30 +1264,33 @@
             </p>
         </footer>
         <!-- Begin Vendor JS Start-->
-        <script src="../../../app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
+        <script src="<%# Page.ResolveUrl("~") %>/app-assets/vendors/js/vendors.min.js" type="text/javascript"></script>
         <!-- Begin Vendor JS Start-->
 
         <!-- Begin Page Vendor JS Start -->
-        <script src="../../../app-assets/vendors/js/ui/headroom.min.js" type="text/javascript"></script>
-        <script src="../../../app-assets/vendors/js/charts/chartist.min.js" type="text/javascript"></script>
-        <script src="../../../app-assets/vendors/js/charts/chartist-plugin-tooltip.min.js" type="text/javascript"></script>
-        <script src="../../../app-assets/vendors/js/charts/raphael-min.js" type="text/javascript"></script>
-        <script src="../../../app-assets/vendors/js/charts/morris.min.js" type="text/javascript"></script>
-        <script src="../../../app-assets/vendors/js/timeline/horizontal-timeline.js" type="text/javascript"></script>
+        <script src="<%# Page.ResolveUrl("~") %>/app-assets/vendors/js/ui/headroom.min.js" type="text/javascript"></script>
+        <script src="<%# Page.ResolveUrl("~") %>/app-assets/vendors/js/charts/chartist.min.js" type="text/javascript"></script>
+        <script src="<%# Page.ResolveUrl("~") %>/app-assets/vendors/js/charts/chartist-plugin-tooltip.min.js" type="text/javascript"></script>
+        <script src="<%# Page.ResolveUrl("~") %>/app-assets/vendors/js/charts/raphael-min.js" type="text/javascript"></script>
+        <script src="<%# Page.ResolveUrl("~") %>/app-assets/vendors/js/charts/morris.min.js" type="text/javascript"></script>
+        <script src="<%# Page.ResolveUrl("~") %>/app-assets/vendors/js/timeline/horizontal-timeline.js" type="text/javascript"></script>
         <!-- Begin Page Vendor JS End -->
 
         <!-- Begin Modern JS Start -->
-        <script src="../../../app-assets/js/core/app-menu.js" type="text/javascript"></script>
-        <script src="../../../app-assets/js/core/app.js" type="text/javascript"></script>
-        <script src="../../../app-assets/js/scripts/customizer.js" type="text/javascript"></script>
+        <script src="<%# Page.ResolveUrl("~") %>/app-assets/js/core/app-menu.js" type="text/javascript"></script>
+        <script src="<%# Page.ResolveUrl("~") %>/app-assets/js/core/app.js" type="text/javascript"></script>
+        <script src="<%# Page.ResolveUrl("~") %>/app-assets/js/scripts/customizer.js" type="text/javascript"></script>
         <!-- Begin Modern JS End -->
 
         <!-- Begin Page Level JS Start -->
-        <script src="../../../app-assets/js/scripts/pages/dashboard-ecommerce.js" type="text/javascript"></script>
+        <script src="<%# Page.ResolveUrl("~") %>/app-assets/js/scripts/pages/dashboard-ecommerce.js" type="text/javascript"></script>
         <!-- Begin Page Level JS End -->
 
+        <!-- Custom Script Start -->
+        <script src="<%# Page.ResolveUrl("~") %>/app-assets/js/scripts/Main.js"></script>
         <asp:ContentPlaceHolder ID="cphScript" runat="server">
         </asp:ContentPlaceHolder>
+        <!-- Custom Script End -->
     </form>
 </body>
 </html>

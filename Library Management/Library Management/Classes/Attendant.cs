@@ -18,13 +18,11 @@ namespace Library_Management.Classes
             Database database = new Database() { ProcedureName = "dbo.CheckUser" };
             
             SqlParameter[] spParameter = new SqlParameter[2];
-
+            
             spParameter[0] = new SqlParameter("@username", SqlDbType.NVarChar, 100);
-            spParameter[0].Direction = ParameterDirection.Input;
             spParameter[0].Value = Username;
 
             spParameter[1] = new SqlParameter("@password", SqlDbType.NVarChar, 100);
-            spParameter[1].Direction = ParameterDirection.Input;
             spParameter[1].Value = Password;
 
             if (database.Queries(spParameter).Tables[0].Rows.Count == 1)

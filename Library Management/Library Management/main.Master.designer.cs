@@ -31,6 +31,15 @@ namespace Library_Management {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// ltrAttendantFullName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal ltrAttendantFullName;
+        
+        /// <summary>
         /// cphMain control.
         /// </summary>
         /// <remarks>
