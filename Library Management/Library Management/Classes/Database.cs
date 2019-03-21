@@ -9,16 +9,20 @@ using Microsoft.ApplicationBlocks.Data;
 
 namespace Library_Management.Classes
 {
-    public class Database
+    public static class Database
     {
-        public string sqlConn = ConfigurationManager.ConnectionStrings["sqlConn"].ConnectionString;
-        public string ProcedureName { get; set; }
-        public DataSet Queries(SqlParameter[] parameters)
+        public static string sqlConn = ConfigurationManager.ConnectionStrings["sqlConn"].ConnectionString;
+        public static string ProcedureName { get; set; }
+        public static DataSet Queries(SqlParameter[] parameters)
         {
             foreach (SqlParameter parameter in parameters)
                 parameter.Direction = ParameterDirection.Input;
-            DataSet ds = SqlHelper.ExecuteDataset(sqlConn.ToString(), CommandType.StoredProcedure, ProcedureName, parameters);
-            return ds;
+
+            return SqlHelper.ExecuteDataset(sqlConn.ToString(), CommandType.StoredProcedure, ProcedureName, parameters); ;
+        }
+        public static DataSet QueryWithSql(string query)
+        {
+            return SqlHelper.ExecuteDataset(sqlConn.ToString(), CommandType.Text, query);
         }
     }
 }

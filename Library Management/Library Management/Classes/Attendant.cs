@@ -15,17 +15,17 @@ namespace Library_Management.Classes
         public string Surname { get; set; }
         public bool Login()
         {
-            Database database = new Database() { ProcedureName = "dbo.CheckUser" };
-            
+            Database.ProcedureName = "dbo.CheckAttendant";
+
             SqlParameter[] spParameter = new SqlParameter[2];
-            
+
             spParameter[0] = new SqlParameter("@username", SqlDbType.NVarChar, 100);
             spParameter[0].Value = Username;
 
             spParameter[1] = new SqlParameter("@password", SqlDbType.NVarChar, 100);
             spParameter[1].Value = Password;
 
-            if (database.Queries(spParameter).Tables[0].Rows.Count == 1)
+            if (Database.Queries(spParameter).Tables[0].Rows.Count == 1)
             {
                 HttpContext.Current.Session.Add("Username", Username);
                 HttpContext.Current.Session.Add("Password", Password);
