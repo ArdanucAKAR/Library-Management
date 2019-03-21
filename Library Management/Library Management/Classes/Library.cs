@@ -5,21 +5,7 @@ using System.Web;
 
 namespace Library_Management
 {
-    public class Library : IOperations
+    public class Library
     {
-        public void Add()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Delete()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

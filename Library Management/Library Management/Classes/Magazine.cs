@@ -3,9 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Library_Management.Classes
+namespace Library_Management
 {
     public class Magazine : Literature
     {
+        public override string GetProcedureName()
+        {
+            return "dbo.AddMagazine";
+        }
+
     }
 }

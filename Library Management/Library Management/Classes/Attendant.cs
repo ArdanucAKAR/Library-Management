@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace Library_Management.Classes
+namespace Library_Management
 {
     public class Attendant
     {
@@ -25,10 +25,12 @@ namespace Library_Management.Classes
             spParameter[1] = new SqlParameter("@password", SqlDbType.NVarChar, 100);
             spParameter[1].Value = Password;
 
-            if (Database.Queries(spParameter).Tables[0].Rows.Count == 1)
+            DataSet ds = Database.Queries(spParameter);
+            if (ds.Tables[0].Rows.Count == 1)
             {
                 HttpContext.Current.Session.Add("Username", Username);
                 HttpContext.Current.Session.Add("Password", Password);
+                HttpContext.Current.Session.Add("FullName", ds.Tables[0].Rows[0]["Name"] + " " + ds.Tables[0].Rows[0]["Surname"]);
                 HttpContext.Current.Session.Add("LoggedIn", true);
                 return true;
             }

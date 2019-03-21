@@ -5,7 +5,8 @@ using System.Web;
 
 namespace Library_Management
 {
-    public class ISBN
+    public enum Language
     {
+        b, Türkçe, İngilizce
     }
 }

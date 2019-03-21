@@ -4,7 +4,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Library_Management.Classes;
 
 namespace Library_Management
 {
@@ -12,7 +11,25 @@ namespace Library_Management
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //Book book = new Book()
+            //{
+            //    ISCode = "a",
+            //    Name = "a",
+            //    SideName = "a",
+            //    AuthorFullName = "a",
+            //    TranslaterFullName = "a",
+            //    _PublishInfo = new PublishInfo()
+            //    {
+            //        Publisher = "a",
+            //        PublishingLocation = "a",
+            //        Circulation = 0,
+            //        PublishDate = "a"
+            //    },
+            //    Language = (int)Language.Türkçe,
+            //    DDCCode = "asd",
+            //    PageNumber = 10
+            //};
+            //book.Add();
         }
     }
 }
