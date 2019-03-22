@@ -10,10 +10,10 @@ namespace Library_Management
     public class Book : Literature
     {
         public string SideName { get; set; }
-        public string AuthorFullName { get; set; }
         public string TranslaterFullName { get; set; }
         public string DDCCode { get; set; }
-        public PublishInfo _PublishInfo { get; set; }
+        public string ISBNCode { get; set; }
+
         public override string GetProcedureName()
         {
             return "dbo.AddBook";
@@ -23,7 +23,7 @@ namespace Library_Management
             base.Add();
             SqlParameter[] spParameter = new SqlParameter[12];
             spParameter[0] = new SqlParameter("@isbn", SqlDbType.NVarChar, 100);
-            spParameter[0].Value = ISCode;
+            spParameter[0].Value = ISBNCode;
 
             spParameter[1] = new SqlParameter("@name", SqlDbType.NVarChar, 100);
             spParameter[1].Value = Name;
@@ -32,7 +32,7 @@ namespace Library_Management
             spParameter[2].Value = SideName;
 
             spParameter[3] = new SqlParameter("@authorFullName", SqlDbType.NVarChar, 100);
-            spParameter[3].Value = AuthorFullName;
+            spParameter[3].Value = _PublishInfo.AuthorFullName;
 
             spParameter[4] = new SqlParameter("@translaterFullName", SqlDbType.NVarChar, 100);
             spParameter[4].Value = TranslaterFullName;

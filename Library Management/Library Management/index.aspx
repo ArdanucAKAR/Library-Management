@@ -104,10 +104,10 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td class="text-truncate"></td>
-                                        <td class="text-truncate"></td>
-                                        <td class="text-truncate"></td>
-                                        <td class="text-truncate"></td>
+                                        <td class="text-truncate">Tutunamayanlar</td>
+                                        <td class="text-truncate">Ardanuc Akar</td>
+                                        <td class="text-truncate">14</td>
+                                        <td class="text-truncate">546 486 45 56</td>
                                         <td class="text-truncate">
                                             <div data-toolbar="transport-options" data-toolbar-animation="grow" class="btn-toolbar btn-toolbar-warning width-auto" data-toolbar-style="warning">
                                                 <i class="la ft-plus"></i>

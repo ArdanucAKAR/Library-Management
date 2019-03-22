@@ -7,6 +7,7 @@ namespace Library_Management
 {
     public class PublishInfo
     {
+        public string AuthorFullName { get; set; }
         public string Publisher { get; set; }
         public string PublishingLocation { get; set; }
         public int Circulation { get; set; }

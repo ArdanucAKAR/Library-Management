@@ -9,9 +9,9 @@ namespace Library_Management
     public abstract class Literature : IOperations
     {
         public int ID { get; set; }
-        public string ISCode { get; set; }
         public string Name { get; set; }
         public int Language { get; set; }
+        public PublishInfo _PublishInfo { get; set; }
         public int PageNumber { get; set; }
 
         public virtual string GetProcedureName()
