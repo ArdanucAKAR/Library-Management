@@ -86,12 +86,11 @@
                             <li class="nav-item d-none d-md-block">
                                 <a class="nav-link nav-fullscreen" id="btnFullscreen"><i class="ficon ft-maximize"></i></a>
                             </li>
-                            <li class="nav-item nav-search"><a class="nav-link nav-link-search" href="#"><i class="ficon ft-search"></i></a>
-                                <%-- Yapılacaklar: Autocomplete Yapılacak --%>
+                            <%--                            <li class="nav-item nav-search"><a class="nav-link nav-link-search" href="#"><i class="ficon ft-search"></i></a>
                                 <div class="search-input">
                                     <input class="input" type="text" placeholder="Explore Modern...">
                                 </div>
-                            </li>
+                            </li>--%>
                         </ul>
                         <ul class="nav navbar-nav float-right">
                             <li class="dropdown dropdown-user nav-item">
@@ -104,16 +103,13 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
                                     <a class="dropdown-item" href="#"><i class="ft-user"></i>Edit Profile</a>
-                                    <a class="dropdown-item" href="#"><i class="ft-mail"></i>My Inbox</a>
-                                    <a class="dropdown-item" href="#"><i class="ft-check-square"></i>Task</a>
-                                    <a class="dropdown-item" href="#"><i class="ft-message-square"></i>Chats</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#"><i class="ft-power"></i>Logout</a>
+                                    <a class="dropdown-item" href="#"><i class="ft-power"></i>Çıkış</a>
                                 </div>
                             </li>
                             <li class="dropdown dropdown-notification nav-item">
                                 <a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon ft-bell"></i>
-                                    <span class="badge badge-pill badge-default badge-danger badge-default badge-up badge-glow">5</span>
+                                    <span class="badge badge-pill badge-default badge-danger badge-default badge-up badge-glow">1</span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
                                     <li class="dropdown-menu-header">
@@ -135,52 +131,6 @@
                                                 </div>
                                             </div>
                                         </a>
-                                        <a href="javascript:void(0)">
-                                            <div class="media">
-                                                <div class="media-left align-self-center"><i class="ft-download-cloud icon-bg-circle bg-red bg-darken-1"></i></div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading red darken-1">99% Server load</h6>
-                                                    <p class="notification-text font-small-3 text-muted">Aliquam tincidunt mauris eu risus.</p>
-                                                    <small>
-                                                        <time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">Five hour ago</time>
-                                                    </small>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="javascript:void(0)">
-                                            <div class="media">
-                                                <div class="media-left align-self-center"><i class="ft-alert-triangle icon-bg-circle bg-yellow bg-darken-3"></i></div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading yellow darken-3">Warning notifixation</h6>
-                                                    <p class="notification-text font-small-3 text-muted">Vestibulum auctor dapibus neque.</p>
-                                                    <small>
-                                                        <time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">Today</time>
-                                                    </small>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="javascript:void(0)">
-                                            <div class="media">
-                                                <div class="media-left align-self-center"><i class="ft-check-circle icon-bg-circle bg-cyan"></i></div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Complete the task</h6>
-                                                    <small>
-                                                        <time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">Last week</time>
-                                                    </small>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a href="javascript:void(0)">
-                                            <div class="media">
-                                                <div class="media-left align-self-center"><i class="ft-file icon-bg-circle bg-teal"></i></div>
-                                                <div class="media-body">
-                                                    <h6 class="media-heading">Generate monthly report</h6>
-                                                    <small>
-                                                        <time class="media-meta text-muted" datetime="2015-06-11T18:29:20+08:00">Last month</time>
-                                                    </small>
-                                                </div>
-                                            </div>
-                                        </a>
                                     </li>
                                     <li class="dropdown-menu-footer"><a class="dropdown-item text-muted text-center" href="javascript:void(0)">Read all notifications</a></li>
                                 </ul>
@@ -192,273 +142,62 @@
         </nav>
         <div class="app-content content">
             <div class="content-wrapper">
-                <div class="content-header row">
-                </div>
                 <div class="main-menu menu-static menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
                     <div class="main-menu-content">
                         <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
                             <li class="navigation-header pt-2">
-                                <span data-i18n="nav.category.layouts">Layouts</span><i class="la la-ellipsis-h ft-minus" data-toggle="tooltip"
-                                    data-placement="right" data-original-title="Layouts"></i>
+                                <span data-i18n="nav.category.layouts">İşlemler</span><i class="la la-ellipsis-h ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="İşlemler"></i>
                             </li>
-                            <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title" data-i18n="nav.templates.main">Templates</span></a>
+                            <li class=" nav-item"><a href="#"><i class="la la-book"></i><span class="menu-title" data-i18n="nav.menu_levels.main">Kitap İşlemleri</span></a>
                                 <ul class="menu-content">
-                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Vertical</a>
+                                    <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level">Kitap Ekle</span></a></li>
+                                    <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level">Kitap Sil</span></a></li>
+                                    <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level">Kitap Güncelle</span></a></li>                                    
+                                    <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level_child.main">Kitap Sipariş İşlemleri</span></a>
                                         <ul class="menu-content">
-                                            <li><a class="menu-item" href="../vertical-menu-template" data-i18n="nav.templates.vert.classic_menu">Classic Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-modern-menu-template">Modern Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-compact-menu-template"
-                                                data-i18n="nav.templates.vert.compact_menu">Compact Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-content-menu-template"
-                                                data-i18n="nav.templates.vert.content_menu">Content Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-overlay-menu-template"
-                                                data-i18n="nav.templates.vert.overlay_menu">Overlay Menu</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.horz.main">Horizontal</a>
-                                        <ul class="menu-content">
-                                            <li><a class="menu-item" href="../horizontal-menu-template" data-i18n="nav.templates.horz.classic">Classic</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../horizontal-menu-template-nav" data-i18n="nav.templates.horz.top_icon">Full Width</a>
-                                            </li>
+                                            <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level_child.third_level">Sipariş Et</span></a></li>
+                                            <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level_child.third_level">Sipariş İptal</span></a></li>
                                         </ul>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="navigation-header pt-2">
-                                <span data-i18n="nav.category.layouts">Layouts</span><i class="la la-ellipsis-h ft-minus" data-toggle="tooltip"
-                                    data-placement="right" data-original-title="Layouts"></i>
-                            </li>
-                            <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title" data-i18n="nav.templates.main">Templates</span></a>
+                            <li class=" nav-item"><a href="#"><i class="la la-newspaper-o"></i><span class="menu-title" data-i18n="nav.menu_levels.main">Dergi İşlemleri</span></a>
                                 <ul class="menu-content">
-                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Vertical</a>
+                                    <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level">Dergi Ekle</span></a></li>
+                                    <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level">Dergi Sil</span></a></li>
+                                    <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level">Dergi Güncelle</span></a></li>                                    
+                                    <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level_child.main">Dergi Sipariş İşlemleri</span></a>
                                         <ul class="menu-content">
-                                            <li><a class="menu-item" href="../vertical-menu-template" data-i18n="nav.templates.vert.classic_menu">Classic Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-modern-menu-template">Modern Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-compact-menu-template"
-                                                data-i18n="nav.templates.vert.compact_menu">Compact Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-content-menu-template"
-                                                data-i18n="nav.templates.vert.content_menu">Content Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-overlay-menu-template"
-                                                data-i18n="nav.templates.vert.overlay_menu">Overlay Menu</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.horz.main">Horizontal</a>
-                                        <ul class="menu-content">
-                                            <li><a class="menu-item" href="../horizontal-menu-template" data-i18n="nav.templates.horz.classic">Classic</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../horizontal-menu-template-nav" data-i18n="nav.templates.horz.top_icon">Full Width</a>
-                                            </li>
+                                            <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level_child.third_level">Sipariş Et</span></a></li>
+                                            <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level_child.third_level">Sipariş İptal</span></a></li>
                                         </ul>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="navigation-header pt-2">
-                                <span data-i18n="nav.category.layouts">Layouts</span><i class="la la-ellipsis-h ft-minus" data-toggle="tooltip"
-                                    data-placement="right" data-original-title="Layouts"></i>
-                            </li>
-                            <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title" data-i18n="nav.templates.main">Templates</span></a>
+                            <li class=" nav-item"><a href="#"><i class="la la-user"></i><span class="menu-title" data-i18n="nav.menu_levels.main">Üye İşlemleri</span></a>
                                 <ul class="menu-content">
-                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Vertical</a>
-                                        <ul class="menu-content">
-                                            <li><a class="menu-item" href="../vertical-menu-template" data-i18n="nav.templates.vert.classic_menu">Classic Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-modern-menu-template">Modern Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-compact-menu-template"
-                                                data-i18n="nav.templates.vert.compact_menu">Compact Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-content-menu-template"
-                                                data-i18n="nav.templates.vert.content_menu">Content Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-overlay-menu-template"
-                                                data-i18n="nav.templates.vert.overlay_menu">Overlay Menu</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.horz.main">Horizontal</a>
-                                        <ul class="menu-content">
-                                            <li><a class="menu-item" href="../horizontal-menu-template" data-i18n="nav.templates.horz.classic">Classic</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../horizontal-menu-template-nav" data-i18n="nav.templates.horz.top_icon">Full Width</a>
-                                            </li>
-                                        </ul>
-                                    </li>
+                                    <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level">Üye Ekle</span></a></li>
+                                    <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level">Üye Sil</span></a></li>
+                                    <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level">Üye Güncelle</span></a></li>
                                 </ul>
                             </li>
+
                             <li class="navigation-header pt-2">
-                                <span data-i18n="nav.category.layouts">Layouts</span><i class="la la-ellipsis-h ft-minus" data-toggle="tooltip"
-                                    data-placement="right" data-original-title="Layouts"></i>
+                                <span data-i18n="nav.category.layouts">Kütüphane İşlemleri</span><i class="la la-ellipsis-h ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="Kütüphane İşlemleri"></i>
                             </li>
-                            <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title" data-i18n="nav.templates.main">Templates</span></a>
+                            <li class="nav-item"><a href="#"><i class="la la-bookmark"></i><span class="menu-title" data-i18n="nav.templates.main">Eserler</span></a>
                                 <ul class="menu-content">
-                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Vertical</a>
-                                        <ul class="menu-content">
-                                            <li><a class="menu-item" href="../vertical-menu-template" data-i18n="nav.templates.vert.classic_menu">Classic Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-modern-menu-template">Modern Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-compact-menu-template"
-                                                data-i18n="nav.templates.vert.compact_menu">Compact Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-content-menu-template"
-                                                data-i18n="nav.templates.vert.content_menu">Content Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-overlay-menu-template"
-                                                data-i18n="nav.templates.vert.overlay_menu">Overlay Menu</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.horz.main">Horizontal</a>
-                                        <ul class="menu-content">
-                                            <li><a class="menu-item" href="../horizontal-menu-template" data-i18n="nav.templates.horz.classic">Classic</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../horizontal-menu-template-nav" data-i18n="nav.templates.horz.top_icon">Full Width</a>
-                                            </li>
-                                        </ul>
-                                    </li>
+                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Kitaplar</a></li>
+                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Dergiler</a></li>
                                 </ul>
                             </li>
-                            <li class="navigation-header pt-2">
-                                <span data-i18n="nav.category.layouts">Layouts</span><i class="la la-ellipsis-h ft-minus" data-toggle="tooltip"
-                                    data-placement="right" data-original-title="Layouts"></i>
-                            </li>
-                            <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title" data-i18n="nav.templates.main">Templates</span></a>
+                            <li class="nav-item"><a href="#"><i class="la la-user"></i><span class="menu-title" data-i18n="nav.templates.main">Üyeler</span></a>
                                 <ul class="menu-content">
-                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Vertical</a>
-                                        <ul class="menu-content">
-                                            <li><a class="menu-item" href="../vertical-menu-template" data-i18n="nav.templates.vert.classic_menu">Classic Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-modern-menu-template">Modern Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-compact-menu-template"
-                                                data-i18n="nav.templates.vert.compact_menu">Compact Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-content-menu-template"
-                                                data-i18n="nav.templates.vert.content_menu">Content Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-overlay-menu-template"
-                                                data-i18n="nav.templates.vert.overlay_menu">Overlay Menu</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.horz.main">Horizontal</a>
-                                        <ul class="menu-content">
-                                            <li><a class="menu-item" href="../horizontal-menu-template" data-i18n="nav.templates.horz.classic">Classic</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../horizontal-menu-template-nav" data-i18n="nav.templates.horz.top_icon">Full Width</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="navigation-header pt-2">
-                                <span data-i18n="nav.category.layouts">Layouts</span><i class="la la-ellipsis-h ft-minus" data-toggle="tooltip"
-                                    data-placement="right" data-original-title="Layouts"></i>
-                            </li>
-                            <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title" data-i18n="nav.templates.main">Templates</span></a>
-                                <ul class="menu-content">
-                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Vertical</a>
-                                        <ul class="menu-content">
-                                            <li><a class="menu-item" href="../vertical-menu-template" data-i18n="nav.templates.vert.classic_menu">Classic Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-modern-menu-template">Modern Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-compact-menu-template"
-                                                data-i18n="nav.templates.vert.compact_menu">Compact Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-content-menu-template"
-                                                data-i18n="nav.templates.vert.content_menu">Content Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-overlay-menu-template"
-                                                data-i18n="nav.templates.vert.overlay_menu">Overlay Menu</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.horz.main">Horizontal</a>
-                                        <ul class="menu-content">
-                                            <li><a class="menu-item" href="../horizontal-menu-template" data-i18n="nav.templates.horz.classic">Classic</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../horizontal-menu-template-nav" data-i18n="nav.templates.horz.top_icon">Full Width</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="navigation-header pt-2">
-                                <span data-i18n="nav.category.layouts">Layouts</span><i class="la la-ellipsis-h ft-minus" data-toggle="tooltip"
-                                    data-placement="right" data-original-title="Layouts"></i>
-                            </li>
-                            <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title" data-i18n="nav.templates.main">Templates</span></a>
-                                <ul class="menu-content">
-                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Vertical</a>
-                                        <ul class="menu-content">
-                                            <li><a class="menu-item" href="../vertical-menu-template" data-i18n="nav.templates.vert.classic_menu">Classic Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-modern-menu-template">Modern Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-compact-menu-template"
-                                                data-i18n="nav.templates.vert.compact_menu">Compact Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-content-menu-template"
-                                                data-i18n="nav.templates.vert.content_menu">Content Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-overlay-menu-template"
-                                                data-i18n="nav.templates.vert.overlay_menu">Overlay Menu</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.horz.main">Horizontal</a>
-                                        <ul class="menu-content">
-                                            <li><a class="menu-item" href="../horizontal-menu-template" data-i18n="nav.templates.horz.classic">Classic</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../horizontal-menu-template-nav" data-i18n="nav.templates.horz.top_icon">Full Width</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="navigation-header pt-2">
-                                <span data-i18n="nav.category.layouts">Layouts</span><i class="la la-ellipsis-h ft-minus" data-toggle="tooltip"
-                                    data-placement="right" data-original-title="Layouts"></i>
-                            </li>
-                            <li class=" nav-item"><a href="#"><i class="la la-television"></i><span class="menu-title" data-i18n="nav.templates.main">Templates</span></a>
-                                <ul class="menu-content">
-                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Vertical</a>
-                                        <ul class="menu-content">
-                                            <li><a class="menu-item" href="../vertical-menu-template" data-i18n="nav.templates.vert.classic_menu">Classic Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-modern-menu-template">Modern Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-compact-menu-template"
-                                                data-i18n="nav.templates.vert.compact_menu">Compact Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-content-menu-template"
-                                                data-i18n="nav.templates.vert.content_menu">Content Menu</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../vertical-overlay-menu-template"
-                                                data-i18n="nav.templates.vert.overlay_menu">Overlay Menu</a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.horz.main">Horizontal</a>
-                                        <ul class="menu-content">
-                                            <li><a class="menu-item" href="../horizontal-menu-template" data-i18n="nav.templates.horz.classic">Classic</a>
-                                            </li>
-                                            <li><a class="menu-item" href="../horizontal-menu-template-nav" data-i18n="nav.templates.horz.top_icon">Full Width</a>
-                                            </li>
-                                        </ul>
-                                    </li>
+                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Dergi Ekle</a></li>
+                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Dergi Sil</a></li>
+                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Dergi Bilgilerini Güncelle</a></li>
+                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Dergi Ödünç Ver</a></li>
+                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Dergi Sipariş Et</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -487,7 +226,7 @@
         <script src="<%# Page.ResolveUrl("~") %>/app-assets/vendors/js/charts/chartist.min.js" type="text/javascript"></script>
         <script src="<%# Page.ResolveUrl("~") %>/app-assets/vendors/js/charts/chartist-plugin-tooltip.min.js" type="text/javascript"></script>
         <script src="<%# Page.ResolveUrl("~") %>/app-assets/vendors/js/charts/raphael-min.js" type="text/javascript"></script>
-        <script src="<%# Page.ResolveUrl("~") %>/app-assets/vendors/js/charts/morris.min.js" type="text/javascript"></script>
+<%--        <script src="<%# Page.ResolveUrl("~") %>/app-assets/vendors/js/charts/morris.min.js" type="text/javascript"></script>--%>
         <script src="<%# Page.ResolveUrl("~") %>/app-assets/vendors/js/timeline/horizontal-timeline.js" type="text/javascript"></script>
         <script src="<%# Page.ResolveUrl("~") %>/app-assets/vendors/js/extensions/jquery.toolbar.min.js" type="text/javascript"></script>
         <!-- Begin Page Vendor JS End -->
@@ -499,7 +238,7 @@
         <!-- Begin Modern JS End -->
 
         <!-- Begin Page Level JS Start -->
-        <script src="<%# Page.ResolveUrl("~") %>/app-assets/js/scripts/pages/dashboard-ecommerce.js" type="text/javascript"></script>
+<%--        <script src="<%# Page.ResolveUrl("~") %>/app-assets/js/scripts/pages/dashboard-ecommerce.js" type="text/javascript"></script>--%>
         <script src="<%# Page.ResolveUrl("~") %>/app-assets/js/scripts/extensions/toolbar.js" type="text/javascript"></script>
         <!-- Begin Page Level JS End -->
 
