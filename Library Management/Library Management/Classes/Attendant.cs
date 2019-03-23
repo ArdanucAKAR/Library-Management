@@ -30,7 +30,7 @@ namespace Library_Management
             {
                 HttpContext.Current.Session.Add("Username", Username);
                 HttpContext.Current.Session.Add("Password", Password);
-                HttpContext.Current.Session.Add("FullName", ds.Tables[0].Rows[0]["Name"] + " " + ds.Tables[0].Rows[0]["Surname"]);
+                HttpContext.Current.Session.Add("FullName", ds.Tables[0].Rows[0]["FullName"]);
                 HttpContext.Current.Session.Add("LoggedIn", true);
                 return true;
             }
