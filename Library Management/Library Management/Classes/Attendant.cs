@@ -11,8 +11,7 @@ namespace Library_Management
     {
         public string Username { get; set; }
         public string Password { get; set; }
-        public string Name { get; set; }
-        public string Surname { get; set; }
+        public string FullName { get; set; }
         public bool Login()
         {
             Database.ProcedureName = "dbo.CheckAttendant";
@@ -26,11 +25,13 @@ namespace Library_Management
             spParameter[1].Value = Password;
 
             DataSet ds = Database.Queries(spParameter);
+            FullName = ds.Tables[0].Rows[0]["fullName"].ToString();
+
             if (ds.Tables[0].Rows.Count == 1)
             {
                 HttpContext.Current.Session.Add("Username", Username);
                 HttpContext.Current.Session.Add("Password", Password);
-                HttpContext.Current.Session.Add("FullName", ds.Tables[0].Rows[0]["FullName"]);
+                HttpContext.Current.Session.Add("FullName", FullName);
                 HttpContext.Current.Session.Add("LoggedIn", true);
                 return true;
             }

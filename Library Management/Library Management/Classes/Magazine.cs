@@ -11,14 +11,9 @@ namespace Library_Management
     {
         public string ISSNCode { get; set; }
 
-        public override string GetProcedureName()
-        {
-            return "dbo.AddMagazine";
-        }
-
         public override void Add()
         {
-            base.Add();
+            Database.ProcedureName = "dbo.AddMagazine";
             SqlParameter[] spParameter = new SqlParameter[12];
             spParameter[0] = new SqlParameter("@issn", SqlDbType.NVarChar, 100);
             spParameter[0].Value = ISSNCode;

@@ -14,15 +14,8 @@ namespace Library_Management
         public PublishInfo _PublishInfo { get; set; }
         public int PageNumber { get; set; }
 
-        public virtual string GetProcedureName()
-        {
-            return null;
-        }
 
-        public virtual void Add()
-        {
-            Database.ProcedureName = GetProcedureName();
-        }
+        public virtual void Add(){}
 
         public void Delete()
         {

@@ -14,13 +14,9 @@ namespace Library_Management
         public string DDCCode { get; set; }
         public string ISBNCode { get; set; }
 
-        public override string GetProcedureName()
-        {
-            return "dbo.AddBook";
-        }
         public override void Add()
         {
-            base.Add();
+            Database.ProcedureName = "dbo.AddBook";
             SqlParameter[] spParameter = new SqlParameter[12];
             spParameter[0] = new SqlParameter("@isbn", SqlDbType.NVarChar, 100);
             spParameter[0].Value = ISBNCode;
