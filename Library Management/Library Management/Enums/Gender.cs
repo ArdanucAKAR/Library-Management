@@ -5,8 +5,8 @@ using System.Web;
 
 namespace Library_Management
 {
-    public enum Language
+    public enum Gender
     {
-        None, Türkçe, İngilizce
+        None, Erkek,Kadın
     }
 }

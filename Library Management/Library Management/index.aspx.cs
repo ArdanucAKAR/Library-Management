@@ -11,6 +11,31 @@ namespace Library_Management
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Personelnfo personelnfo = new Personelnfo()
+            //{
+            //    FullName = "v",
+            //    Age = 21,
+            //    Gender = (int)Gender.Erkek,
+            //    EducationLevel = (int)EducationLevel.YüksekLisans,
+            //    Adress = "a"
+            //};
+
+            //Member member = new Member(personelnfo)
+            //{
+            //    TCNumber = "495",
+            //    RegisterDate = DateTime.Now,
+            //    LibraryPoint = 0,
+            //    status = 1
+            //};
+            //Contact contact = new Contact()
+            //{
+            //    Mail = "khrmnvol",
+            //    PhoneNumber = "555555"
+            //};
+
+            //member.AssociateWithContact(contact);
+            //member.Add();
+
             //Book book = new Book()
             //{
             //    ISCode = "a",

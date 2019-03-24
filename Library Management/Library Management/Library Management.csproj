@@ -5065,6 +5065,7 @@
     <Compile Include="Classes\Attendant.cs" />
     <Compile Include="Classes\Barcode.cs" />
     <Compile Include="Classes\Book.cs" />
+    <Compile Include="Classes\Contact.cs" />
     <Compile Include="Classes\ISBN.cs" />
     <Compile Include="Classes\Library.cs" />
     <Compile Include="Classes\Literature.cs" />
@@ -5072,9 +5073,12 @@
     <Compile Include="Classes\Magazine.cs" />
     <Compile Include="Classes\Mail.cs" />
     <Compile Include="Classes\Member.cs" />
+    <Compile Include="Classes\Personelnfo.cs" />
     <Compile Include="Classes\PublishInfo.cs" />
     <Compile Include="Classes\Reservation.cs" />
     <Compile Include="Classes\Database.cs" />
+    <Compile Include="Enums\Gender.cs" />
+    <Compile Include="Enums\EducationLevel.cs" />
     <Compile Include="Enums\Language.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
