@@ -11,6 +11,7 @@ namespace Library_Management
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //Üye Ekleme
             //Personelnfo personelnfo = new Personelnfo()
             //{
             //    FullName = "v",
@@ -19,7 +20,6 @@ namespace Library_Management
             //    EducationLevel = (int)EducationLevel.YüksekLisans,
             //    Adress = "a"
             //};
-
             //Member member = new Member(personelnfo)
             //{
             //    TCNumber = "495",
@@ -32,10 +32,10 @@ namespace Library_Management
             //    Mail = "khrmnvol",
             //    PhoneNumber = "555555"
             //};
-
             //member.AssociateWithContact(contact);
             //member.Add();
 
+            //Kitap Ekleme
             //Book book = new Book()
             //{
             //    ISCode = "a",
@@ -55,6 +55,19 @@ namespace Library_Management
             //    PageNumber = 10
             //};
             //book.Add();
+
+            //Kitap Arama
+            //Library a = new Library();
+            //a.SearchBook("a");
+
+            //Ödünç Test
+            //Loaned loaned = new Loaned();
+            //loaned.LiteratureId = 1;
+            //Response.Write(loaned.isLoaned());
+
+            //Rezervasyon Test
+            Reservation reservation = new Reservation();
+            reservation.Reverse(1, 1, "1");
         }
     }
 }

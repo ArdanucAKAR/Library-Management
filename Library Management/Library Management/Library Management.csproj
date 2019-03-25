@@ -5059,6 +5059,7 @@
     <Content Include="app-assets\images\backgrounds\login-background.jpg" />
     <Content Include="index.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="SearchLiterature.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -5106,6 +5107,13 @@
       <DependentUpon>main.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchLiterature.aspx.cs">
+      <DependentUpon>SearchLiterature.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchLiterature.aspx.designer.cs">
+      <DependentUpon>SearchLiterature.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="main.Master" />

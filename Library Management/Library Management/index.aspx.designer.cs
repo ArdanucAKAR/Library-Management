@@ -7,9 +7,11 @@
 // </otomatik üretildi>
 //------------------------------------------------------------------------------
 
-namespace Library_Management {
-    
-    
-    public partial class index {
+namespace Library_Management
+{
+
+
+    public partial class index
+    {
     }
 }

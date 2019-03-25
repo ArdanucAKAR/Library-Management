@@ -44,6 +44,5 @@ namespace Library_Management
 
             Database.Queries(spParameter);
         }
-
     }
 }
