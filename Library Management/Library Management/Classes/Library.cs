@@ -35,7 +35,7 @@ namespace Library_Management
                 },
                 ISSNCode = b.Field<string>("issn"),
                 ID = b.Field<int>("id")
-            }).ToList();          
+            }).ToList();       
         }
     }
 }

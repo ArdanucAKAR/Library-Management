@@ -79,5 +79,51 @@ namespace Library_Management
         {
             throw new NotImplementedException();
         }
+
+        public List<Book> GetLoanedBooks()
+        {
+            return Database.QueryWithSql("EXEC GetLoanedLiterature " + ID).Tables[0].AsEnumerable().Select(b => new Book
+            {
+                Name = b.Field<string>("name"),
+                _PublishInfo = new PublishInfo()
+                {
+                    AuthorFullName = b.Field<string>("authorFullName"),
+                    Publisher = b.Field<string>("publisher")
+                },
+                ISBNCode = b.Field<string>("isbn"),
+                ID = b.Field<int>("id")
+            }).ToList();
+        }
+
+        public List<Magazine> GetLoanedMagazines()
+        {
+            return Database.QueryWithSql("EXEC GetLoanedLiterature " + ID).Tables[0].AsEnumerable().Select(b => new Magazine
+            {
+                Name = b.Field<string>("name"),
+                _PublishInfo = new PublishInfo()
+                {
+                    AuthorFullName = b.Field<string>("authorFullName"),
+                    Publisher = b.Field<string>("publisher")
+                },
+                ISSNCode = b.Field<string>("issn"),
+                ID = b.Field<int>("id")
+            }).ToList();
+        }
+
+        public void GetMemberInformation(int id)
+        {
+            Database.ProcedureName = "dbo.GetMemberInformation";
+            SqlParameter[] spParameter = new SqlParameter[1];
+
+            spParameter[0] = new SqlParameter("@id", SqlDbType.Int);
+            spParameter[0].Value = id;
+
+            DataSet ds = Database.Queries(spParameter);
+            personelnfo.FullName = ds.Tables[0].Rows[0]["fullName"].ToString();
+            personelnfo.Gender = int.Parse(ds.Tables[0].Rows[0]["gender"].ToString());
+            personelnfo.EducationLevel = int.Parse(ds.Tables[0].Rows[0]["educationLevel"].ToString());
+            personelnfo.Adress = ds.Tables[0].Rows[0]["address"].ToString();
+            personelnfo.Age = int.Parse(ds.Tables[0].Rows[0]["age"].ToString());            
+        }
     }
 }
