@@ -15,18 +15,47 @@ namespace Library_Management
         public Contact contact;
         protected void Page_Load(object sender, EventArgs e)
         {
-            member = new Member(new Personelnfo());
-            member.ID = int.Parse(RouteData.Values["id"].ToString());
-            personelnfo = member.GetMemberInformation(1);
-            contact = member.GetContact();
+            int id;
+            string _id = (RouteData.Values["MemberParameter"] != null ? RouteData.Values["MemberParameter"].ToString() : "");
+            if (int.TryParse(_id, out id) == true)
+            {
+                mvMember.ActiveViewIndex = 1;
+                member = new Member(new Personelnfo());
+                member.ID = id;
+                personelnfo = member.GetMemberInformation(id);
+                contact = member.GetContact();
 
-            List<Book> books = member.GetLoanedBooks();
-            repBook.DataSource = books;
-            repBook.DataBind();
+                List<Book> books = member.GetLoanedBooks();
+                repBook.DataSource = books;
+                repBook.DataBind();
 
-            List<Magazine> magazine = member.GetLoanedMagazines();
-            repMagazine.DataSource = magazine;
-            repMagazine.DataBind();
+                List<Magazine> magazine = member.GetLoanedMagazines();
+                repMagazine.DataSource = magazine;
+                repMagazine.DataBind();
+            }
+            else
+            {
+                if (_id.ToLower() == string.Empty)
+                {
+                    mvMember.ActiveViewIndex = 0;
+                }
+                else if (_id.ToLower() == "add")
+                {
+                    mvMember.ActiveViewIndex = 2;
+                }
+                else if (_id.ToLower() == "update")
+                {
+                    mvMember.ActiveViewIndex = 3;
+                }
+                else if (_id.ToLower() == "delete")
+                {
+                    mvMember.ActiveViewIndex = 4;
+                }
+                else
+                {
+                    Response.Redirect("~/Error");
+                }
+            }
         }
     }
 }

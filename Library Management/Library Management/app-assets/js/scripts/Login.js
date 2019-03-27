@@ -3,6 +3,11 @@
     trigger: 'manual',
     placement: 'right'
 });
+$(document).keypress(function (event) {
+    if (event.keyCode == 13) {
+        $("#btnLogin").click();
+    }
+});
 function CheckLogin() {
     if (Page_ClientValidate("Login")) {
         var username, password;

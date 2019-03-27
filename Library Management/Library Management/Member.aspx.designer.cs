@@ -13,6 +13,33 @@ namespace Library_Management {
     public partial class Member1 {
         
         /// <summary>
+        /// mvMember control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.MultiView mvMember;
+        
+        /// <summary>
+        /// vMemberDefault control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View vMemberDefault;
+        
+        /// <summary>
+        /// vMemberProfile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View vMemberProfile;
+        
+        /// <summary>
         /// repBook control.
         /// </summary>
         /// <remarks>
@@ -29,5 +56,32 @@ namespace Library_Management {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater repMagazine;
+        
+        /// <summary>
+        /// vMemberAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View vMemberAdd;
+        
+        /// <summary>
+        /// vMemberUpdate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View vMemberUpdate;
+        
+        /// <summary>
+        /// vMemberDelete control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.View vMemberDelete;
     }
 }

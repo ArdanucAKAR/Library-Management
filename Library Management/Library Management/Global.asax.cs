@@ -17,13 +17,15 @@ namespace Library_Management
         }
 
         public void RegisterRoutes(RouteCollection routes)
-        {
+        {            
             routes.MapPageRoute("Login", "Login", "~/Login.aspx");
-            routes.MapPageRoute("Anasayfa 1", "", "~/index.aspx");
-            routes.MapPageRoute("Anasayfa 2", "Home", "~/index.aspx");
-            routes.MapPageRoute("Member 1", "Member/{id}", "~/member.aspx");
-            //routes.MapPageRoute("Member 1", "Member/Add", "~/index.aspx");
-            //routes.MapPageRoute("Member 1", "Member/{id}", "~/index.aspx");
+            routes.MapPageRoute("Error", "Error", "~/Error.aspx");
+            routes.MapPageRoute("Home Default", "", "~/index.aspx");
+            routes.MapPageRoute("Home", "Home", "~/index.aspx");
+            routes.MapPageRoute("Member Default", "Member", "~/member.aspx");
+            routes.MapPageRoute("Member", "Member/{MemberParameter}", "~/member.aspx");
+            routes.MapPageRoute("Literatures Default", "Literatures", "~/Literature.aspx");
+            routes.MapPageRoute("Literatures", "Literatures/{LiteraturesParameter}", "~/member.aspx");
         }
 
         protected void Session_Start(object sender, EventArgs e)

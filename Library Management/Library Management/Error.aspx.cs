@@ -7,14 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Library_Management
 {
-    public partial class main : System.Web.UI.MasterPage
+    public partial class error : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (!Attendant.isLoggedIn())
-            //    Response.Redirect("~/Login");
 
-            //ltrAttendantFullName.Text = Session["FullName"].ToString();
         }
     }
 }

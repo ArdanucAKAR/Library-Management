@@ -149,37 +149,27 @@
                             <li class="navigation-header pt-2">
                                 <span data-i18n="nav.category.layouts">İşlemler</span><i class="la la-ellipsis-h ft-minus" data-toggle="tooltip" data-placement="right" data-original-title="İşlemler"></i>
                             </li>
-                            <li class=" nav-item"><a href="#"><i class="la la-book"></i><span class="menu-title" data-i18n="nav.menu_levels.main">Kitap İşlemleri</span></a>
+                            <li class="nav-item"><a href="#"><i class="la la-book"></i><span class="menu-title" data-i18n="nav.menu_levels.main">Kitap İşlemleri</span></a>
                                 <ul class="menu-content">
-                                    <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level">Kitap Ekle</span></a></li>
-                                    <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level">Kitap Sil</span></a></li>
-                                    <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level">Kitap Güncelle</span></a></li>
-                                    <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level_child.main">Kitap Sipariş İşlemleri</span></a>
-                                        <ul class="menu-content">
-                                            <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level_child.third_level">Sipariş Et</span></a></li>
-                                            <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level_child.third_level">Sipariş İptal</span></a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a class="menu-item" href="<%#Page.ResolveUrl("~") %>/Literatures/AddBook"><i></i><span data-i18n="nav.menu_levels.second_level">Kitap Ekle</span></a></li>
+                                    <li><a class="menu-item" href="<%#Page.ResolveUrl("~") %>/Literatures/DeleteBook"><i></i><span data-i18n="nav.menu_levels.second_level">Kitap Sil</span></a></li>
+                                    <li><a class="menu-item" href="<%#Page.ResolveUrl("~") %>/Literatures/UpdateBook"><i></i><span data-i18n="nav.menu_levels.second_level">Kitap Güncelle</span></a></li>
+                                    <li><a class="menu-item" href="<%#Page.ResolveUrl("~") %>/Literatures/OrderBook"><i></i><span data-i18n="nav.menu_levels.second_level">Kitap Sipariş</span></a></li>
                                 </ul>
                             </li>
-                            <li class=" nav-item"><a href="#"><i class="la la-newspaper-o"></i><span class="menu-title" data-i18n="nav.menu_levels.main">Dergi İşlemleri</span></a>
+                            <li class="nav-item"><a href="#"><i class="la la-newspaper-o"></i><span class="menu-title" data-i18n="nav.menu_levels.main">Dergi İşlemleri</span></a>
                                 <ul class="menu-content">
-                                    <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level">Dergi Ekle</span></a></li>
-                                    <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level">Dergi Sil</span></a></li>
-                                    <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level">Dergi Güncelle</span></a></li>
-                                    <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level_child.main">Dergi Sipariş İşlemleri</span></a>
-                                        <ul class="menu-content">
-                                            <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level_child.third_level">Sipariş Et</span></a></li>
-                                            <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level_child.third_level">Sipariş İptal</span></a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a class="menu-item" href="<%#Page.ResolveUrl("~") %>/Literatures/AddMagazine"><i></i><span data-i18n="nav.menu_levels.second_level">Dergi Ekle</span></a></li>
+                                    <li><a class="menu-item" href="<%#Page.ResolveUrl("~") %>/Literatures/DeleteMagazine"><i></i><span data-i18n="nav.menu_levels.second_level">Dergi Sil</span></a></li>
+                                    <li><a class="menu-item" href="<%#Page.ResolveUrl("~") %>/Literatures/UpdateMagazine"><i></i><span data-i18n="nav.menu_levels.second_level">KiDergitap Güncelle</span></a></li>
+                                    <li><a class="menu-item" href="<%#Page.ResolveUrl("~") %>/Literatures/OrderMagazine"><i></i><span data-i18n="nav.menu_levels.second_level">Dergi Sipariş</span></a></li>
                                 </ul>
                             </li>
                             <li class=" nav-item"><a href="#"><i class="la la-user"></i><span class="menu-title" data-i18n="nav.menu_levels.main">Üye İşlemleri</span></a>
                                 <ul class="menu-content">
-                                    <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level">Üye Ekle</span></a></li>
-                                    <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level">Üye Sil</span></a></li>
-                                    <li><a class="menu-item" href="#"><i></i><span data-i18n="nav.menu_levels.second_level">Üye Güncelle</span></a></li>
+                                    <li><a class="menu-item" href="<%#Page.ResolveUrl("~") %>/Member/Add"><i></i><span data-i18n="nav.menu_levels.second_level">Üye Ekle</span></a></li>
+                                    <li><a class="menu-item" href="<%#Page.ResolveUrl("~") %>/Member/Delete"><i></i><span data-i18n="nav.menu_levels.second_level">Üye Sil</span></a></li>
+                                    <li><a class="menu-item" href="<%#Page.ResolveUrl("~") %>/Member/Update"><i></i><span data-i18n="nav.menu_levels.second_level">Üye Güncelle</span></a></li>
                                 </ul>
                             </li>
 
@@ -192,15 +182,7 @@
                                     <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Dergiler</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item"><a href="#"><i class="la la-user"></i><span class="menu-title" data-i18n="nav.templates.main">Üyeler</span></a>
-                                <ul class="menu-content">
-                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Dergi Ekle</a></li>
-                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Dergi Sil</a></li>
-                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Dergi Bilgilerini Güncelle</a></li>
-                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Dergi Ödünç Ver</a></li>
-                                    <li><a class="menu-item" href="#" data-i18n="nav.templates.vert.main">Dergi Sipariş Et</a></li>
-                                </ul>
-                            </li>
+                            <li class="nav-item"><a href="<%#Page.ResolveUrl("~") %>/Member"><i class="la la-user"></i><span class="menu-title" data-i18n="nav.templates.main">Üyeler</span></a></li>
                         </ul>
                     </div>
                 </div>

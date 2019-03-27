@@ -1786,6 +1786,7 @@
     <Content Include="app-assets\js\core\libraries\jquery_ui\jquery-ui.min.js" />
     <Content Include="app-assets\js\core\libraries\jquery_ui\touch.min.js" />
     <Content Include="app-assets\js\core\libraries\jquery_ui\widgets.min.js" />
+    <Content Include="app-assets\js\scripts\Member.js" />
     <Content Include="app-assets\js\scripts\Main.js" />
     <Content Include="app-assets\js\scripts\animation\animation.js" />
     <Content Include="app-assets\js\scripts\animation\animation.min.js" />
@@ -5055,9 +5056,11 @@
     <Content Include="assets\css\style.css" />
     <Content Include="assets\js\scripts.js" />
     <Content Include="app-assets\images\logo\e-KOS-Logo.png" />
+    <Content Include="Error.aspx" />
     <Content Include="Global.asax" />
     <Content Include="app-assets\images\backgrounds\login-background.jpg" />
     <Content Include="index.aspx" />
+    <Content Include="Literature.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Member.aspx" />
     <Content Include="SearchLiterature.aspx" />
@@ -5082,6 +5085,13 @@
     <Compile Include="Enums\Gender.cs" />
     <Compile Include="Enums\EducationLevel.cs" />
     <Compile Include="Enums\Language.cs" />
+    <Compile Include="Error.aspx.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.cs">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -5093,6 +5103,13 @@
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IOperations.cs" />
+    <Compile Include="Literature.aspx.cs">
+      <DependentUpon>Literature.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Literature.aspx.designer.cs">
+      <DependentUpon>Literature.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
