@@ -52,7 +52,7 @@ namespace Library_Management
             spParameter[5].Value = personelnfo.Gender;
 
             spParameter[6] = new SqlParameter("@address", SqlDbType.NVarChar, 100);
-            spParameter[6].Value = personelnfo.Adress;
+            spParameter[6].Value = personelnfo.Address;
 
             spParameter[7] = new SqlParameter("@registerDate", SqlDbType.DateTime);
             spParameter[7].Value = RegisterDate;
@@ -82,7 +82,7 @@ namespace Library_Management
 
         public List<Book> GetLoanedBooks()
         {
-            return Database.QueryWithSql("EXEC GetLoanedLiterature " + ID).Tables[0].AsEnumerable().Select(b => new Book
+            return Database.QueryWithSql("EXEC GetLoanedBooks " + ID).Tables[0].AsEnumerable().Select(b => new Book
             {
                 Name = b.Field<string>("name"),
                 _PublishInfo = new PublishInfo()
@@ -97,7 +97,7 @@ namespace Library_Management
 
         public List<Magazine> GetLoanedMagazines()
         {
-            return Database.QueryWithSql("EXEC GetLoanedLiterature " + ID).Tables[0].AsEnumerable().Select(b => new Magazine
+            return Database.QueryWithSql("EXEC GetLoanedMagazines " + ID).Tables[0].AsEnumerable().Select(b => new Magazine
             {
                 Name = b.Field<string>("name"),
                 _PublishInfo = new PublishInfo()
@@ -110,7 +110,7 @@ namespace Library_Management
             }).ToList();
         }
 
-        public void GetMemberInformation(int id)
+        public Personelnfo GetMemberInformation(int id)
         {
             Database.ProcedureName = "dbo.GetMemberInformation";
             SqlParameter[] spParameter = new SqlParameter[1];
@@ -122,8 +122,17 @@ namespace Library_Management
             personelnfo.FullName = ds.Tables[0].Rows[0]["fullName"].ToString();
             personelnfo.Gender = int.Parse(ds.Tables[0].Rows[0]["gender"].ToString());
             personelnfo.EducationLevel = int.Parse(ds.Tables[0].Rows[0]["educationLevel"].ToString());
-            personelnfo.Adress = ds.Tables[0].Rows[0]["address"].ToString();
-            personelnfo.Age = int.Parse(ds.Tables[0].Rows[0]["age"].ToString());            
+            personelnfo.Address = ds.Tables[0].Rows[0]["address"].ToString();
+            personelnfo.Age = int.Parse(ds.Tables[0].Rows[0]["age"].ToString());
+            this.contact = new Contact();
+            this.contact.PhoneNumber = ds.Tables[0].Rows[0]["phoneNumber"].ToString();
+            this.contact.Mail = ds.Tables[0].Rows[0]["mail"].ToString();
+            return this.personelnfo;
+        }
+
+        public Contact GetContact()
+        {
+            return this.contact;
         }
     }
 }

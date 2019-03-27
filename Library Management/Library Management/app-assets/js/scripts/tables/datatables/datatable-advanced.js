@@ -107,7 +107,7 @@ $(document).ready(function() {
     var groupingTable = $('.row-grouping').DataTable({
         "columnDefs": [{
             "visible": false,
-            "targets": 2
+            "targets": 5
         }],
         "order": [
             [2, 'asc']
@@ -120,7 +120,7 @@ $(document).ready(function() {
             }).nodes();
             var last = null;
 
-            api.column(2, {
+            api.column(5, {
                 page: 'current'
             }).data().each(function(group, i) {
                 if (last !== group) {
@@ -131,6 +131,8 @@ $(document).ready(function() {
                     last = group;
                 }
             });
+        }, "language": {
+            "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Turkish.json"
         }
     });
 

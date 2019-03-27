@@ -11,6 +11,6 @@ namespace Library_Management
         public int Age { get; set; }
         public int Gender { get; set; }
         public int EducationLevel { get; set; }
-        public string Adress { get; set; }
+        public string Address { get; set; }
     }
 }

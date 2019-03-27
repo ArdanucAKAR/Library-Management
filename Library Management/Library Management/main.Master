@@ -36,7 +36,7 @@
     <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/vendors/css/charts/chartist-plugin-tooltip.css">
     <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/vendors/css/extensions/jquery.toolbar.css">
     <!-- Begin Vendor CSS End -->
-    
+
     <!-- Begin Modern CSS Start -->
     <link rel="stylesheet" type="text/css" href="<%# Page.ResolveUrl("~") %>/app-assets/css/app.css" />
     <!-- Begin Modern CSS End -->
@@ -214,8 +214,8 @@
             <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
                 <span class="float-md-left d-block d-md-inline-block">Telif Hakkı &copy;
                     <script>document.write(+new Date().getFullYear());</script>
-                    <a href="https://www.instagram.com/ardanuckar">Ardanuc AKAR</a> <a href="https://www.instagram.com/khrmnvolkan">Volkan KAHRAMAN</a>, Tüm Hakları Saklıdır. </span>
-                <span class="float-md-right d-block d-md-inline-blockd-none d-lg-block">Hand-crafted & Made with <i class="ft-heart pink"></i></span>
+                    <a href="https://www.instagram.com/ardanuckar">Ardanuc AKAR</a> <a href="https://www.instagram.com/khrmnvolkan">Volkan KAHRAMAN</a>, Tüm Hakları Saklıdır. 
+                </span>
             </p>
         </footer>
         <!-- Begin Vendor JS Start-->

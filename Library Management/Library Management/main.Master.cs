@@ -12,7 +12,7 @@ namespace Library_Management
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Attendant.isLoggedIn())
-                Response.Redirect("Login");
+                Response.Redirect("~/Login");
 
             ltrAttendantFullName.Text = Session["FullName"].ToString();
         }
