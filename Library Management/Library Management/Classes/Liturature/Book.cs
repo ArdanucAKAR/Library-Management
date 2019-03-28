@@ -13,7 +13,6 @@ namespace Library_Management
         public string TranslaterFullName { get; set; }
         public string DDCCode { get; set; }
         public string ISBNCode { get; set; }
-
         public override bool Add()
         {
             Database.ProcedureName = "dbo.AddBook";
@@ -46,7 +45,7 @@ namespace Library_Management
             spParameter[8].Value = PublishInfo.PublishDate;
 
             spParameter[9] = new SqlParameter("@language", SqlDbType.Int);
-            spParameter[9].Value = Language;
+            spParameter[9].Value = (int)Language;
 
             spParameter[10] = new SqlParameter("@ddcCode", SqlDbType.NVarChar, 100);
             spParameter[10].Value = DDCCode;
@@ -61,6 +60,79 @@ namespace Library_Management
             }
             catch
             {
+                return false;
+            }
+        }
+        public override bool Update()
+        {
+            Database.ProcedureName = "dbo.UpdateBook";
+            SqlParameter[] spParameter = new SqlParameter[13];
+            spParameter[0] = new SqlParameter("@isbn", SqlDbType.NVarChar, 100);
+            spParameter[0].Value = ISBNCode;
+
+            spParameter[1] = new SqlParameter("@name", SqlDbType.NVarChar, 100);
+            spParameter[1].Value = Name;
+
+            spParameter[2] = new SqlParameter("@sideName", SqlDbType.NVarChar, 100);
+            spParameter[2].Value = SideName;
+
+            spParameter[3] = new SqlParameter("@authorFullName", SqlDbType.NVarChar, 100);
+            spParameter[3].Value = PublishInfo.AuthorFullName;
+
+            spParameter[4] = new SqlParameter("@translaterFullName", SqlDbType.NVarChar, 100);
+            spParameter[4].Value = TranslaterFullName;
+
+            spParameter[5] = new SqlParameter("@publisher", SqlDbType.NVarChar, 100);
+            spParameter[5].Value = PublishInfo.Publisher;
+
+            spParameter[6] = new SqlParameter("@publishingLocation", SqlDbType.NVarChar, 100);
+            spParameter[6].Value = PublishInfo.PublishingLocation;
+
+            spParameter[7] = new SqlParameter("@circulation", SqlDbType.Int);
+            spParameter[7].Value = PublishInfo.Circulation;
+
+            spParameter[8] = new SqlParameter("@publishDate", SqlDbType.NVarChar, 100);
+            spParameter[8].Value = PublishInfo.PublishDate;
+
+            spParameter[9] = new SqlParameter("@language", SqlDbType.Int);
+            spParameter[9].Value = (int)Language;
+
+            spParameter[10] = new SqlParameter("@ddcCode", SqlDbType.NVarChar, 100);
+            spParameter[10].Value = DDCCode;
+
+            spParameter[11] = new SqlParameter("@pageNumber", SqlDbType.Int);
+            spParameter[11].Value = PageNumber;
+
+            spParameter[12] = new SqlParameter("@id", SqlDbType.Int);
+            spParameter[12].Value = ID;
+
+            try
+            {
+                Database.Queries(spParameter);
+                return true;
+            }
+            catch(Exception err)
+            {
+                System.Diagnostics.Debug.WriteLine(err.ToString());
+                return false;
+            }
+        }
+        public override bool Delete()
+        {
+            Database.ProcedureName = "dbo.DeleteBook";
+            SqlParameter[] spParameter = new SqlParameter[1];
+
+            spParameter[0] = new SqlParameter("@isbn", SqlDbType.NVarChar, 100);
+            spParameter[0].Value = ISBNCode;
+
+            try
+            {
+                Database.Queries(spParameter);
+                return true;
+            }
+            catch (Exception err)
+            {
+                System.Diagnostics.Debug.WriteLine(err.ToString());
                 return false;
             }
         }

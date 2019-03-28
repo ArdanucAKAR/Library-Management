@@ -168,29 +168,24 @@ $(".memberDeleteSteps").steps({
         }
     },
     onFinished: function (event, currentIndex) {
-        if (Page_ClientValidate("Step2")) {
-            $.ajax({
-                type: "POST",
-                url: "/Member.aspx/DeleteMember",
-                data: "{ID : '" + $("#txtUserLibraryId").val() + "'}",
-                contentType: "application/json; charset=utf-8",
-                dataType: "json",
-                success: function (response) {
-                    $("#txtUserLibraryId").val("");
-                    toastr.success('Başarılı', 'Kayıt Silindi');
-                    $(".memberDeleteSteps").steps("previous");
-                    $(".memberDeleteSteps").steps("previous");
-                },
-                failure: function (response) {
-                },
-                error: function (response) {
-                    toastr.error('Hata', 'Kayıt Silinemedi');
-                }
-            });
-        }
-        else {
-            return false;
-        }
+        $.ajax({
+            type: "POST",
+            url: "/Member.aspx/DeleteMember",
+            data: "{ID : '" + $("#txtUserLibraryId").val() + "'}",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (response) {
+                $("#txtUserLibraryId").val("");
+                toastr.success('Başarılı', 'Kayıt Silindi');
+                $(".memberDeleteSteps").steps("previous");
+                $(".memberDeleteSteps").steps("previous");
+            },
+            failure: function (response) {
+            },
+            error: function (response) {
+                toastr.error('Hata', 'Kayıt Silinemedi');
+            }
+        });
     }
 });
 

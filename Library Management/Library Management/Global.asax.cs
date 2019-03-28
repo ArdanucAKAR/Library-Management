@@ -25,7 +25,8 @@ namespace Library_Management
             routes.MapPageRoute("Member Default", "Member", "~/member.aspx");
             routes.MapPageRoute("Member", "Member/{MemberParameter}", "~/member.aspx");
             routes.MapPageRoute("Literatures Default", "Literatures", "~/Literature.aspx");
-            routes.MapPageRoute("Literatures", "Literatures/{LiteraturesParameter}", "~/member.aspx");
+            routes.MapPageRoute("Literatures", "Literatures/{LiteratureType}/{LiteraturesTypeOperation}", "~/Literature.aspx");
+            routes.MapPageRoute("Literatures1", "Literatures/{LiteratureType}/{LiteraturesTypeOperation}/{LiteraturesTypeOperationOfOperation}", "~/Literature.aspx");
         }
 
         protected void Session_Start(object sender, EventArgs e)

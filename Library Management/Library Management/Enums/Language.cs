@@ -7,6 +7,6 @@ namespace Library_Management
 {
     public enum Language
     {
-        None, Türkçe, İngilizce
+        Türkçe = 1, İngilizce = 2
     }
 }

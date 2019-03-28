@@ -7,9 +7,21 @@ using System.Web;
 
 namespace Library_Management
 {
-    public class Reservation
+    public class Reservation : LibraryProcedureController
     {
         public DateTime Date { get; set; }
+        public override bool Add()
+        {
+            return true;
+        }
+        public override bool Delete()
+        {
+            return true;
+        }
+        public override bool Update()
+        {
+            return true;
+        }
         public void Reverse(int memberId, int literatureId, string ISCode)
         {
             Database.ProcedureName = "dbo.AddReservation";

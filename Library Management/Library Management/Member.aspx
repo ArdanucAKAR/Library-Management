@@ -10,7 +10,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphMain" runat="server">
     <asp:MultiView ID="mvMember" runat="server">
         <asp:View ID="vMemberDefault" runat="server">
-            <section id="dom">
+            <section>
                 <div class="row">
                     <div class="col-12">
                         <div class="card">
@@ -40,7 +40,7 @@
                                                         <td><%#Eval("ID") %></td>
                                                         <td><%#Eval("PersonelInfo.FullName") %></td>
                                                         <td><%#Eval("PersonelInfo.TCNumber") %></td>
-                                                        <td><%#Eval("PersonelInfo.Age") %></td>
+                                                        <td><%#Eval("PersonelInfo.Birthday") %></td>
                                                         <td><%#Eval("PersonelInfo.EducationLevel") %></td>
                                                         <td><%#Eval("PersonelInfo.Gender") %></td>
                                                         <td><%#Eval("MemberLibraryInfo.LibraryPoint") %></td>
@@ -193,22 +193,21 @@
                                                     <div class="form-group">
                                                         <label>TC Kimlik Numarası:</label>
                                                         <asp:TextBox ID="txtTCNumber" runat="server" MaxLength="11" CssClass="form-control" ValidationGroup="Step1" ClientIDMode="Static"></asp:TextBox>
-                                                        <asp:RequiredFieldValidator ID="rfvTCNumber" runat="server" ErrorMessage="TC Numarası Boş Geçilemez" ControlToValidate="txtTCNumber" Display="Dynamic" ValidationGroup="Step1" ForeColor="DarkRed"></asp:RequiredFieldValidator>
-                                                        <asp:RegularExpressionValidator ID="revTCNumber" ControlToValidate="txtTCNumber" runat="server" ErrorMessage="TC Kimlik Numarası Sadece Sayı Olabilir" ValidationExpression="\d+" Display="Dynamic" ValidationGroup="Step1" ForeColor="DarkRed"></asp:RegularExpressionValidator>
-                                                        <asp:CompareValidator ID="cvTCNumber" runat="server" ErrorMessage="TC Numarası Sayı Olmalıdır" Operator="DataTypeCheck" Type="Integer" ControlToValidate="txtTCNumber" Display="Dynamic" ValidationGroup="Step1" ForeColor="DarkRed"></asp:CompareValidator>
+                                                        <asp:RequiredFieldValidator ID="rfvTCNumber" runat="server" ErrorMessage="TC Kimlik Numarası Boş Geçilemez" ControlToValidate="txtTCNumber" Display="Dynamic" ValidationGroup="Step1" ForeColor="DarkRed"></asp:RequiredFieldValidator>
+                                                        <asp:CompareValidator ID="cvTCNumber" runat="server" ErrorMessage="TC Kimlik Numarası Sayı Olmalıdır" Operator="DataTypeCheck" Type="Integer" ControlToValidate="txtTCNumber" Display="Dynamic" ValidationGroup="Step1" ForeColor="DarkRed"></asp:CompareValidator>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label>Cinsiyet:</label>
-                                                        <asp:DropDownList ID="ddlGender" runat="server" CssClass="form-control" ClientIDMode="Static"></asp:DropDownList>
+                                                        <asp:DropDownList ID="ddlGender" runat="server" CssClass="form-control" ClientIDMode="Static" ValidationGroup="Step1"></asp:DropDownList>
                                                         <asp:RequiredFieldValidator InitialValue="0" ID="rfvGender" Display="Dynamic" ValidationGroup="Step1" runat="server" ControlToValidate="ddlGender" ErrorMessage="Cinsiyet Boş Geçilemez" ForeColor="DarkRed"></asp:RequiredFieldValidator>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label>Eğitim Düzeyi:</label>
-                                                        <asp:DropDownList ID="ddlEducationLevel" runat="server" CssClass="form-control" ClientIDMode="Static"></asp:DropDownList>
+                                                        <asp:DropDownList ID="ddlEducationLevel" runat="server" CssClass="form-control" ClientIDMode="Static" ValidationGroup="Step1"></asp:DropDownList>
                                                         <asp:RequiredFieldValidator InitialValue="0" ID="rfvEducationLevel" Display="Dynamic" ValidationGroup="Step1" runat="server" ControlToValidate="ddlEducationLevel" ErrorMessage="Eğitim Düzeyi Boş Geçilemez" ForeColor="DarkRed"></asp:RequiredFieldValidator>
                                                     </div>
                                                 </div>
@@ -315,9 +314,8 @@
                                                     <div class="form-group">
                                                         <label>TC Kimlik Numarası:</label>
                                                         <asp:TextBox ID="txtUpdateTCNumber" runat="server" MaxLength="11" CssClass="form-control" ValidationGroup="Step2" ClientIDMode="Static"></asp:TextBox>
-                                                        <asp:RequiredFieldValidator ID="rfvUpdateTCNumber" runat="server" ErrorMessage="TC Numarası Boş Geçilemez" ControlToValidate="txtUpdateTCNumber" Display="Dynamic" ValidationGroup="Step2" ForeColor="DarkRed"></asp:RequiredFieldValidator>
-                                                        <asp:RegularExpressionValidator ID="revUpdateTCNumber" ControlToValidate="txtUpdateTCNumber" runat="server" ErrorMessage="TC Kimlik Numarası Sadece Sayı Olabilir" ValidationExpression="\d+" Display="Dynamic" ValidationGroup="Step2" ForeColor="DarkRed"></asp:RegularExpressionValidator>
-                                                        <asp:CompareValidator ID="cvUpdateTCNumber" runat="server" ErrorMessage="TC Numarası Sayı Olmalıdır" Operator="DataTypeCheck" Type="Integer" ControlToValidate="txtUpdateTCNumber" Display="Dynamic" ValidationGroup="Step2" ForeColor="DarkRed"></asp:CompareValidator>
+                                                        <asp:RequiredFieldValidator ID="rfvUpdateTCNumber" runat="server" ErrorMessage="TC Kimlik Numarası Boş Geçilemez" ControlToValidate="txtUpdateTCNumber" Display="Dynamic" ValidationGroup="Step2" ForeColor="DarkRed"></asp:RequiredFieldValidator>
+                                                        <asp:CompareValidator ID="cvUpdateTCNumber" runat="server" ErrorMessage="TC Kimlik Numarası Sayı Olmalıdır" Operator="DataTypeCheck" Type="Integer" ControlToValidate="txtUpdateTCNumber" Display="Dynamic" ValidationGroup="Step2" ForeColor="DarkRed"></asp:CompareValidator>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">

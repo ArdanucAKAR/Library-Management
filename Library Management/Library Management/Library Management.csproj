@@ -1786,6 +1786,8 @@
     <Content Include="app-assets\js\core\libraries\jquery_ui\jquery-ui.min.js" />
     <Content Include="app-assets\js\core\libraries\jquery_ui\touch.min.js" />
     <Content Include="app-assets\js\core\libraries\jquery_ui\widgets.min.js" />
+    <Content Include="app-assets\js\scripts\cookie\jquery.cookie.js" />
+    <Content Include="app-assets\js\scripts\Literature.js" />
     <Content Include="app-assets\js\scripts\Member.js" />
     <Content Include="app-assets\js\scripts\Main.js" />
     <Content Include="app-assets\js\scripts\animation\animation.js" />
@@ -5067,6 +5069,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\LibraryProcedureController\LibraryProcedureController.cs" />
+    <Compile Include="Classes\LibraryProcedureController\Loaned\LoanedInfo.cs" />
     <Compile Include="Classes\Member\MemberLibraryInfo.cs" />
     <Compile Include="Classes\Officials\Attendant.cs" />
     <Compile Include="Classes\Officials\AuthenticationService.cs" />
@@ -5076,13 +5080,14 @@
     <Compile Include="Classes\ISBN.cs" />
     <Compile Include="Classes\Library.cs" />
     <Compile Include="Classes\Liturature\Literature.cs" />
-    <Compile Include="Classes\Loaned.cs" />
+    <Compile Include="Classes\LibraryProcedureController\Loaned\Loaned.cs" />
     <Compile Include="Classes\Liturature\Magazine.cs" />
     <Compile Include="Classes\Mail.cs" />
     <Compile Include="Classes\Member\Member.cs" />
     <Compile Include="Classes\Member\PersonelInfo.cs" />
-    <Compile Include="Classes\PublishInfo.cs" />
-    <Compile Include="Classes\Reservation.cs" />
+    <Compile Include="Classes\LibraryProcedureController\Order\Order.cs" />
+    <Compile Include="Classes\Liturature\PublishInfo.cs" />
+    <Compile Include="Classes\LibraryProcedureController\Reservation\Reservation.cs" />
     <Compile Include="Classes\Database.cs" />
     <Compile Include="Enums\Gender.cs" />
     <Compile Include="Enums\EducationLevel.cs" />

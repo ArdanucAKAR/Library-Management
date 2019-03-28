@@ -1,19 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
 namespace Library_Management
 {
-    public abstract class Literature : IOperations
+    public abstract class LibraryProcedureController : IOperations
     {
         public int ID { get; set; }
-        public string Name { get; set; }
-        public Language Language { get; set; }
-        public PublishInfo PublishInfo { get; set; }
-        public int PageNumber { get; set; }
-
+        public Member Member { get; set; }
+        public Literature Literature { get; set; }
         public virtual bool Add()
         {
             throw new NotImplementedException();
@@ -28,6 +24,5 @@ namespace Library_Management
         {
             throw new NotImplementedException();
         }
-
     }
 }

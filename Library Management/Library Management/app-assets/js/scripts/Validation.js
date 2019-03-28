@@ -9,14 +9,13 @@ $('#txtPassword').popover({
     placement: 'right'
 });
 function IsEmpty(sender, args) {
-    if (args.Value == "") {
+    if (args.Value === "") {
         args.IsValid = false;
         $("#" + $(sender)[0].controltovalidate).addClass("is-invalid");
         $("#" + $(sender)[0].controltovalidate).popover('show');
         setTimeout(function () {
             $("#" + $(sender)[0].controltovalidate).popover('hide');
         }, 3000);
-
     }
     else {
         args.IsValid = true;
