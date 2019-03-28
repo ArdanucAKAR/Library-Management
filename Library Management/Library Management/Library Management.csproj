@@ -5067,24 +5067,27 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Attendant.cs" />
+    <Compile Include="Classes\Member\MemberLibraryInfo.cs" />
+    <Compile Include="Classes\Officials\Attendant.cs" />
+    <Compile Include="Classes\Officials\AuthenticationService.cs" />
     <Compile Include="Classes\Barcode.cs" />
-    <Compile Include="Classes\Book.cs" />
-    <Compile Include="Classes\Contact.cs" />
+    <Compile Include="Classes\Liturature\Book.cs" />
+    <Compile Include="Classes\Member\Contact.cs" />
     <Compile Include="Classes\ISBN.cs" />
     <Compile Include="Classes\Library.cs" />
-    <Compile Include="Classes\Literature.cs" />
+    <Compile Include="Classes\Liturature\Literature.cs" />
     <Compile Include="Classes\Loaned.cs" />
-    <Compile Include="Classes\Magazine.cs" />
+    <Compile Include="Classes\Liturature\Magazine.cs" />
     <Compile Include="Classes\Mail.cs" />
-    <Compile Include="Classes\Member.cs" />
-    <Compile Include="Classes\Personelnfo.cs" />
+    <Compile Include="Classes\Member\Member.cs" />
+    <Compile Include="Classes\Member\PersonelInfo.cs" />
     <Compile Include="Classes\PublishInfo.cs" />
     <Compile Include="Classes\Reservation.cs" />
     <Compile Include="Classes\Database.cs" />
     <Compile Include="Enums\Gender.cs" />
     <Compile Include="Enums\EducationLevel.cs" />
     <Compile Include="Enums\Language.cs" />
+    <Compile Include="Enums\Status.cs" />
     <Compile Include="Error.aspx.cs">
       <DependentUpon>Error.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -14,7 +14,7 @@ namespace Library_Management
         public string DDCCode { get; set; }
         public string ISBNCode { get; set; }
 
-        public override void Add()
+        public override bool Add()
         {
             Database.ProcedureName = "dbo.AddBook";
             SqlParameter[] spParameter = new SqlParameter[12];
@@ -28,22 +28,22 @@ namespace Library_Management
             spParameter[2].Value = SideName;
 
             spParameter[3] = new SqlParameter("@authorFullName", SqlDbType.NVarChar, 100);
-            spParameter[3].Value = _PublishInfo.AuthorFullName;
+            spParameter[3].Value = PublishInfo.AuthorFullName;
 
             spParameter[4] = new SqlParameter("@translaterFullName", SqlDbType.NVarChar, 100);
             spParameter[4].Value = TranslaterFullName;
 
             spParameter[5] = new SqlParameter("@publisher", SqlDbType.NVarChar, 100);
-            spParameter[5].Value = _PublishInfo.Publisher;
+            spParameter[5].Value = PublishInfo.Publisher;
 
             spParameter[6] = new SqlParameter("@publishingLocation", SqlDbType.NVarChar, 100);
-            spParameter[6].Value = _PublishInfo.PublishingLocation;
+            spParameter[6].Value = PublishInfo.PublishingLocation;
 
             spParameter[7] = new SqlParameter("@circulation", SqlDbType.Int);
-            spParameter[7].Value = _PublishInfo.Circulation;
+            spParameter[7].Value = PublishInfo.Circulation;
 
             spParameter[8] = new SqlParameter("@publishDate", SqlDbType.NVarChar, 100);
-            spParameter[8].Value = _PublishInfo.PublishDate;
+            spParameter[8].Value = PublishInfo.PublishDate;
 
             spParameter[9] = new SqlParameter("@language", SqlDbType.Int);
             spParameter[9].Value = Language;
@@ -54,7 +54,15 @@ namespace Library_Management
             spParameter[11] = new SqlParameter("@pageNumber", SqlDbType.Int);
             spParameter[11].Value = PageNumber;
 
-            Database.Queries(spParameter);
+            try
+            {
+                Database.Queries(spParameter);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

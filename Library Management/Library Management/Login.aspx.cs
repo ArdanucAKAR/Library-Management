@@ -15,14 +15,16 @@ namespace Library_Management
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Attendant.isLoggedIn())
-                Response.Redirect("Home");
+            if (AuthenticationService.isLoggedIn())
+                Response.Redirect("~/Home");
         }
         [WebMethod]
         public static bool CheckLogin(string username, string password)
         {
-            Attendant attendant = new Attendant() { Username = username, Password = password };
-            return attendant.Login();
+            if (AuthenticationService.Login(username, password) != null)
+                return true;
+            else
+                return false;
         }
     }
 }

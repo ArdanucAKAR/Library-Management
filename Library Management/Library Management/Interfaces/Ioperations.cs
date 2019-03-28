@@ -8,10 +8,10 @@ namespace Library_Management
 {
     interface IOperations
     {
-        void Add();
+        bool Add();
 
-        void Update();
+        bool Update();
 
-        void Delete();
+        bool Delete();
     }
 }

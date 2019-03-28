@@ -11,20 +11,23 @@ namespace Library_Management
         public int ID { get; set; }
         public string Name { get; set; }
         public int Language { get; set; }
-        public PublishInfo _PublishInfo { get; set; }
+        public PublishInfo PublishInfo { get; set; }
         public int PageNumber { get; set; }
 
-
-        public virtual void Add(){}
-
-        public void Delete()
+        public virtual bool Add()
         {
             throw new NotImplementedException();
         }
 
-        public void Update()
+        public virtual bool Delete()
         {
             throw new NotImplementedException();
         }
+
+        public virtual bool Update()
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

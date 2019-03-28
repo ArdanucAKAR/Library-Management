@@ -62,12 +62,11 @@ namespace Library_Management
 
             //Ödünç Test
             //Loaned loaned = new Loaned();
-            //loaned.LiteratureId = 1;
-            //Response.Write(loaned.isLoaned());
-
-            //Rezervasyon Test
-            Reservation reservation = new Reservation();
-            reservation.Reverse(1, 1, "1");
+            //loaned.LiteratureId = 2;
+            //loaned.LoanDate = DateTime.Now.ToShortDateString();
+            //loaned.ReturnDate = DateTime.Now.AddDays(7).ToShortDateString();
+            //loaned.MemberId = 3;
+            //loaned.LendMagazine();
         }
     }
 }

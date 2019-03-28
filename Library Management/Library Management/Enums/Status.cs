@@ -5,8 +5,8 @@ using System.Web;
 
 namespace Library_Management
 {
-    public enum Gender
+    public enum Status
     {
-        Erkek = 1, Kadın = 2
+        Aktif = 1, Kapalı = 2, Dondurulmuş = 3
     }
 }

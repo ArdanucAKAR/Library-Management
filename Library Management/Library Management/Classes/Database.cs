@@ -15,8 +15,9 @@ namespace Library_Management
         public static string ProcedureName { get; set; }
         public static DataSet Queries(SqlParameter[] parameters)
         {
-            foreach (SqlParameter parameter in parameters)
-                parameter.Direction = ParameterDirection.Input;
+            if (parameters != null)
+                foreach (SqlParameter parameter in parameters)
+                    parameter.Direction = ParameterDirection.Input;
 
             return SqlHelper.ExecuteDataset(sqlConn.ToString(), CommandType.StoredProcedure, ProcedureName, parameters);
         }

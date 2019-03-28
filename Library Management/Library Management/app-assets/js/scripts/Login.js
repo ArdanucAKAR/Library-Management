@@ -4,7 +4,7 @@
     placement: 'right'
 });
 $(document).keypress(function (event) {
-    if (event.keyCode == 13) {
+    if (event.keyCode === 13) {
         $("#btnLogin").click();
     }
 });
@@ -20,7 +20,7 @@ function CheckLogin() {
             contentType: "application/json; charset=utf-8",
             dataType: "json",
             success: function (response) {
-                if (response.d == true) {
+                if (response.d === true) {
                     $("#txtUsername").removeClass("is-invalid").addClass("is-valid");
                     $("#txtPassword").removeClass("is-invalid").addClass("is-valid");
                     setTimeout(function () {

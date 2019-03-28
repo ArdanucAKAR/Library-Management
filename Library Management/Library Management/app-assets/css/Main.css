@@ -1,3 +1,7 @@
 ﻿.nav-fullscreen {
     padding: 1.7rem 1rem 1.7rem 1rem !important;
 }
+
+.app-content {
+    overflow: inherit !important;
+}

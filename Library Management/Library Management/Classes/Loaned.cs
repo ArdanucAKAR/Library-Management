@@ -8,10 +8,11 @@ using System.Web;
 namespace Library_Management
 {
     public class Loaned
-    {
-        public DateTime LoanDate { get; set; }
+    {        
         public int MemberId { get; set; }
         public int LiteratureId { get; set; }
+        public string LoanDate { get; set; }
+        public string ReturnDate { get; set; }
 
         public bool isLoaned()
         {
@@ -26,10 +27,10 @@ namespace Library_Management
             else
                 return false;
         }
-        public void Lend()
+        public void LendBook()
         {
-            Database.ProcedureName = "dbo.LendLiterature";
-            SqlParameter[] spParameter = new SqlParameter[3];
+            Database.ProcedureName = "dbo.LendBook";
+            SqlParameter[] spParameter = new SqlParameter[4];
             spParameter[0] = new SqlParameter("@memberId", SqlDbType.Int);
             spParameter[0].Value = MemberId;
 
@@ -38,6 +39,27 @@ namespace Library_Management
 
             spParameter[2] = new SqlParameter("@date", SqlDbType.DateTime);
             spParameter[2].Value = LoanDate;
+
+            spParameter[3] = new SqlParameter("@returnDate", SqlDbType.DateTime);
+            spParameter[3].Value = ReturnDate;
+
+            Database.Queries(spParameter);
+        }
+        public void LendMagazine()
+        {
+            Database.ProcedureName = "dbo.LendMagazine";
+            SqlParameter[] spParameter = new SqlParameter[4];
+            spParameter[0] = new SqlParameter("@memberId", SqlDbType.Int);
+            spParameter[0].Value = MemberId;
+
+            spParameter[1] = new SqlParameter("@literatureId", SqlDbType.Int);
+            spParameter[1].Value = LiteratureId;
+
+            spParameter[2] = new SqlParameter("@date", SqlDbType.DateTime);
+            spParameter[2].Value = LoanDate;
+
+            spParameter[3] = new SqlParameter("@returnDate", SqlDbType.DateTime);
+            spParameter[3].Value = ReturnDate;
 
             Database.Queries(spParameter);
         }

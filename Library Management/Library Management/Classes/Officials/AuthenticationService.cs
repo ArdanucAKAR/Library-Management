@@ -7,17 +7,13 @@ using System.Web;
 
 namespace Library_Management
 {
-    public class Attendant
+    public static class AuthenticationService
     {
-        public string Username { get; set; }
-        public string Password { get; set; }
-        public string FullName { get; set; }
-        public bool Login()
+        public static Attendant Login(string Username, string Password)
         {
-            Database.ProcedureName = "dbo.CheckAttendant";
-
             SqlParameter[] spParameter = new SqlParameter[2];
 
+            Database.ProcedureName = "dbo.CheckAttendant";
             spParameter[0] = new SqlParameter("@username", SqlDbType.NVarChar, 100);
             spParameter[0].Value = Username;
 
@@ -25,7 +21,7 @@ namespace Library_Management
             spParameter[1].Value = Password;
 
             DataSet ds = Database.Queries(spParameter);
-            FullName = ds.Tables[0].Rows[0]["fullName"].ToString();
+            string FullName = ds.Tables[0].Rows[0]["fullName"].ToString();
 
             if (ds.Tables[0].Rows.Count == 1)
             {
@@ -33,10 +29,10 @@ namespace Library_Management
                 HttpContext.Current.Session.Add("Password", Password);
                 HttpContext.Current.Session.Add("FullName", FullName);
                 HttpContext.Current.Session.Add("LoggedIn", true);
-                return true;
+                return new Attendant() { Username = Username, Password = Password, FullName = FullName };
             }
             else
-                return false;
+                return null;
         }
         public static bool isLoggedIn()
         {
@@ -45,7 +41,7 @@ namespace Library_Management
             else
                 return false;
         }
-        public void Logout()
+        public static void Logout()
         {
             HttpContext.Current.Session.Clear();
         }
