@@ -69,4 +69,3 @@ Projemizin amacı, tüm kütüphaneler için kitapların ve dergilerin stokları
     
 4.  Sistemin çevrimdışı da çalışabilmesi.
 
-w/ [Ardanuc Akar](https://github.com/ArdanucAKAR)
