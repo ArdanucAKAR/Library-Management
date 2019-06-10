@@ -9,6 +9,14 @@ Projemizin amacı, tüm kütüphaneler için kitapların ve dergilerin stokları
 ![](e-KOS.png)
 # Squence Diyagramı
 ![](Squence.png)
+
+# Ekran Görüntüleri
+<img src="ss1.jpeg" width="800"/>
+<img src="ss2.jpeg" width="800"/>
+<img src="ss3.jpeg" width="800"/>
+<img src="ss4.jpeg" width="800"/>
+<img src="ss5.jpeg" width="800"/>
+
 # Terminoloji
 
 -   ISBN : Amaç, kitap numaralarının uluslararası bir yöntemle düzenlenerek standardize edilip, Uluslararası Standart Kitap Numarası (ISBN) verilerek belirli bir yayımcının yayınladığı bir materyalin kimliğini tanımlamaktır.
