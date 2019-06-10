@@ -1,5 +1,10 @@
 # Library-Management
+<p align="center">
+<img src="https://media.discordapp.net/attachments/290120833320484865/557694861818462240/unknown.png" width="400"/>
+</p>
+
 e-KOS Project (Created By [Ardanuc Akar](https://github.com/ArdanucAKAR) &amp; [Volkan Kahraman](https://github.com/volkankahraman))
+
 
 Döküman : https://docs.google.com/document/d/1ETJTrYptOci3vz-bvnwCZTBgBnLFEYZvGil6AdVeWak/edit?usp=sharing
 ### Projenin Amacı :
